@@ -9,35 +9,55 @@
   - file: docs/spa/intro
     sections:
       - file: docs/spa/user_guides/chapter1
-  - file: docs/spa/sample_specific_tips/chapter1
+  - file: docs/spa/tutorials/tutorials
+  - file: docs/spa/howto/howto
+  - file: docs/spa/reference/reference
+  - file: docs/spa/discussions/discussions  
 
 - part: in situ particle detection
   chapters: 
   - file: docs/TM/intro
+  - file: docs/TM/tutorials/tutorials
+  - file: docs/TM/howto/howto
+  - file: docs/TM/reference/reference
+  - file: docs/TM/discussions/discussions 
 
 - part: Simulation
   chapters: 
   - file: docs/sim/intro
-  - file: docs/sim/user_guides/intro
+  - file: docs/sim/tutorials/tutorials
+  - file: docs/sim/howto/howto
     sections:
       - file: docs/sim/user_guides/getit
       - file: docs/sim/user_guides/options
       - file: docs/sim/user_guides/command_line_opts
+  - file: docs/sim/reference/reference
+  - file: docs/sim/discussions/discussions  
+  - file: docs/sim/user_guides/intro
 
 - part: Tomography
   chapters: 
   - file: docs/tomo/intro
+  - file: docs/tomo/tutorials/tutorials
+  - file: docs/tomo/howto/howto
+  - file: docs/tomo/reference/reference
+  - file: docs/tomo/discussions/discussions  
 
 - part: Development
   chapters: 
   - file: docs/dev/intro
-  - file: docs/dev/getting_started/intro.md
     sections:
       - file: docs/dev/getting_started/contributor_agreement.md
       - file: docs/dev/getting_started/software_hierarchy.md
       - file: docs/dev/getting_started/developer_hierarchy.md
       - file: docs/dev/getting_started/develoment_environment.md
-  - file: docs/dev/git_workflow/intro.md
+  - file: docs/dev/tutorials/tutorials
+  - file: docs/dev/howto/howto
+    sections:
+      - file: docs/dev/git_workflow/intro.md
+  - file: docs/dev/reference/reference
+  - file: docs/dev/discussions/discussions  
+
 
 
 
