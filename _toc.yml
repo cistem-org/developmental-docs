@@ -42,6 +42,9 @@
   - file: docs/tomo/howto/howto
   - file: docs/tomo/reference/reference
   - file: docs/tomo/discussions/discussions  
+    sections:
+      - file: docs/tomo/discussions/ctftilt
+
 
 - part: Development
   chapters: 
