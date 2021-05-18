@@ -4,6 +4,10 @@
 title: dev and user guides
 author: The cisTEM cryoEM Community
 logo: icons/cisTEM.png
+# Patterns to skip when building the book.
+exclude_patterns: [README.md, _build, icons]
+
+
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
