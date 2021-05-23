@@ -22,8 +22,12 @@
         sections:
           - file: docs/dev/howto/ImageProcessing/cpu_data_io
   - file: docs/dev/reference/reference
+    sections:
+      - file: docs/dev/reference/alphabetical
+      - file: docs/dev/reference/classes/intro
+          
   - file: docs/dev/discussions/discussions 
-  
+
 - part: Single Particle Cryo-EM
   chapters: 
   - file: docs/spa/intro
