@@ -1,6 +1,5 @@
-# Git Workflow
-==================================
-----------------------------------------
+# Git workflow
+
 After you have decided which repository to fork from (link to Getting started/Project organization) you will want to create your own local repository.
 
 ## Git basics
@@ -13,7 +12,7 @@ To create a fork, navigate to the repository you will most directly be working w
 
 Just click on the fork button on the top right
 
-![git fork](../../../icons/gitfork2.png)
+![git fork](../../../../icons/gitfork2.png)
 
 ### Cloning your new remote fork to work locally
 
@@ -55,8 +54,4 @@ The next step is to clean up your local commit history:
 ### The repository workflow overall (handled by maintainers.)
 
 
-![git flow](../../../icons/gitflow2.png)
-
-
-
-
+![git flow](../../../../icons/gitflow2.svg)

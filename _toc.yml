@@ -4,6 +4,26 @@
 
 - file: intro
 
+- part: Development
+  chapters: 
+  - file: docs/dev/intro
+    sections:
+      - file: docs/dev/getting_started/contributor_agreement
+      - file: docs/dev/getting_started/software_hierarchy
+      - file: docs/dev/getting_started/developer_hierarchy
+      - file: docs/dev/getting_started/develoment_environment
+  - file: docs/dev/tutorials/tutorials
+  - file: docs/dev/howto/howto
+    sections:
+      - file: docs/dev/howto/Collaboration/intro 
+        sections:
+          - file: docs/dev/howto/Collaboration/git_workflow
+      - file: docs/dev/howto/ImageProcessing/how_to_image_processing
+        sections:
+          - file: docs/dev/howto/ImageProcessing/cpu_data_io
+  - file: docs/dev/reference/reference
+  - file: docs/dev/discussions/discussions 
+  
 - part: Single Particle Cryo-EM
   chapters: 
   - file: docs/spa/intro
@@ -46,20 +66,7 @@
       - file: docs/tomo/discussions/ctftilt
 
 
-- part: Development
-  chapters: 
-  - file: docs/dev/intro
-    sections:
-      - file: docs/dev/getting_started/contributor_agreement.md
-      - file: docs/dev/getting_started/software_hierarchy.md
-      - file: docs/dev/getting_started/developer_hierarchy.md
-      - file: docs/dev/getting_started/develoment_environment.md
-  - file: docs/dev/tutorials/tutorials
-  - file: docs/dev/howto/howto
-    sections:
-      - file: docs/dev/git_workflow/intro.md
-  - file: docs/dev/reference/reference
-  - file: docs/dev/discussions/discussions  
+ 
 
 
 
