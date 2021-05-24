@@ -6,8 +6,7 @@
 
 To run the simulator or template matching you will need an alpha version of *cis*TEM. For most people, the best choice will be to download a pre-compiled binary, following the instuctions here: [get cistem tutorial](get_cistem.md) For those interested in compiling form source code, you will need to add the "--enable-experimental" flag to your configure line, as well as following the instructions [here.](https://github.com/bHimes/cisTEM_downstream_bah/wiki/Compiling-cisTEM)
 
-
-
+(calc_3d_scattering)=
 ## 2 - Calculate a 3D scattering potential
 
 Simulation in TEM involves describing
