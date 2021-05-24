@@ -1,4 +1,4 @@
-# Welcome to your source for info about cisTEM
+# Welcome to your source for info about *cis*TEM
 
 *cis*TEM (computational imaging system for Transmission Electron Microscopy) _n_ - 
 
@@ -10,7 +10,5 @@
 The main objective of this documention is to enable you to use and/or contribute to the image processing library underlying *cis*TEM. 
 
 
-![overview icon](icons/docs_icon.svg) [^ref]
+![overview icon](icons/docs_icon2.svg) 
 
-
-[^ref]: The documentation layout pic is a screen grab from [this talk](https://www.youtube.com/watch?v=t4vKPhjcMZg) by Daniele Procida.

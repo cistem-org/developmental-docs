@@ -1,4 +1,4 @@
-# **Intro**
+# <span style="color: #d01010">**Intro**</span>
 
 
 ```{admonition} *TODO*
