@@ -4,59 +4,90 @@
 
 - file: intro
 
+- part: Development
+  chapters: 
+  - file: docs/dev/intro
+    sections:
+      - file: docs/dev/getting_started/contributor_agreement
+      - file: docs/dev/getting_started/software_hierarchy
+      - file: docs/dev/getting_started/developer_hierarchy
+      - file: docs/dev/getting_started/develoment_environment
+  - file: docs/dev/tutorials/tutorials
+  - file: docs/dev/reference/reference
+    sections:
+      - file: docs/dev/reference/alphabetical
+      - file: docs/dev/reference/classes/intro       
+  - file: docs/dev/discussions/discussions 
+  - file: docs/dev/howto/howto
+    sections:
+      - file: docs/dev/howto/Collaboration/intro 
+        sections:
+          - file: docs/dev/howto/Collaboration/git_workflow
+      - file: docs/dev/howto/ImageProcessing/how_to_image_processing
+        sections:
+          - file: docs/dev/howto/ImageProcessing/cpu_data_io
+
 - part: Single Particle Cryo-EM
   chapters: 
   - file: docs/spa/intro
     sections:
       - file: docs/spa/user_guides/chapter1
   - file: docs/spa/tutorials/tutorials
-  - file: docs/spa/howto/howto
   - file: docs/spa/reference/reference
   - file: docs/spa/discussions/discussions  
+  - file: docs/spa/howto/howto
 
-- part: in situ particle detection
-  chapters: 
-  - file: docs/TM/intro
-  - file: docs/TM/tutorials/tutorials
-  - file: docs/TM/howto/howto
-  - file: docs/TM/reference/reference
-  - file: docs/TM/discussions/discussions 
 
 - part: Simulation
   chapters: 
   - file: docs/sim/intro
   - file: docs/sim/tutorials/tutorials
+  - file: docs/sim/reference/reference
+  - file: docs/sim/discussions/discussions  
   - file: docs/sim/howto/howto
     sections:
       - file: docs/sim/user_guides/getit
       - file: docs/sim/user_guides/options
       - file: docs/sim/user_guides/command_line_opts
-  - file: docs/sim/reference/reference
-  - file: docs/sim/discussions/discussions  
-  - file: docs/sim/user_guides/intro
+
+- part: in situ particle detection
+  chapters: 
+  - file: docs/TM/intro
+  - file: docs/TM/tutorials/tutorials
+  - file: docs/TM/reference/reference
+  - file: docs/TM/discussions/discussions 
+  - file: docs/TM/howto/howto
+
 
 - part: Tomography
   chapters: 
   - file: docs/tomo/intro
   - file: docs/tomo/tutorials/tutorials
-  - file: docs/tomo/howto/howto
   - file: docs/tomo/reference/reference
   - file: docs/tomo/discussions/discussions  
+    sections:
+      - file: docs/tomo/discussions/ctftilt
+  - file: docs/tomo/howto/howto
 
-- part: Development
-  chapters: 
-  - file: docs/dev/intro
+# For routine developmental builds, we want to selectively supress warnings for not included in _toc for files we don't want here.
+# The false flags obscure meaningful warnings, however, we also can't supress all of this type, because it is in general a useful warning.
+# When pushing to the master branch, comment out this section. TODO: find a better approach
+- part: Appendix
+  chapters:
+  - file: _appendix
     sections:
-      - file: docs/dev/getting_started/contributor_agreement.md
-      - file: docs/dev/getting_started/software_hierarchy.md
-      - file: docs/dev/getting_started/developer_hierarchy.md
-      - file: docs/dev/getting_started/develoment_environment.md
-  - file: docs/dev/tutorials/tutorials
-  - file: docs/dev/howto/howto
-    sections:
-      - file: docs/dev/git_workflow/intro.md
-  - file: docs/dev/reference/reference
-  - file: docs/dev/discussions/discussions  
+    - file: docs/TM/tutorials/make_3d_ref
+    - file: docs/dev/reference/classes/Image/QuickAndDirtyReadSlice
+    - file: docs/dev/reference/classes/MRCFile/MRCFile
+    - file: docs/dev/reference/classes/MRCFile/OpenFile
+    - file: docs/dev/reference/classes/MRCFile/ReadSliceFromDisk
+    - file: docs/sim/tutorials/get_cistem
+
+
+
+
+
+ 
 
 
 

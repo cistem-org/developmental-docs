@@ -1,5 +1,2 @@
-How-To Guides
-======================================================
+# <span style="color: #d01010">**How-to guides**</span>
 
-
-Nothing to see here yet
