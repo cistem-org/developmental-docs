@@ -16,10 +16,6 @@ MRCFile(std::string filename, bool overwrite, bool wait_for_file_to_exist);
 
 ### public
 
-```{note}
-Arguably all of these properties should be private. 
-```
-
 std::fstream *my_file;
 MRCHeader my_header;
 wxString filename;
@@ -27,10 +23,14 @@ bool do_nothing; // under special circumstances (like when the file is /dev/null
 bool rewrite_header_on_close;
 int max_number_of_seconds_to_wait_for_file_to_exist;
 
+```{note}
+Arguably all of these properties should probably be private. 
+```
+
 ### private
 
-```{sidebar}
-TODO: search code to see if these are infact treated as private, and if so modify them there.
+```{sidebar} TODO
+search code to see if these are infact treated as private, and if so modify them there.
 ```
 
 ## Methods
@@ -43,17 +43,12 @@ inline int ReturnNumberOfSlices() {MyDebugAssertTrue(my_file->is_open(), "File n
 
 inline bool IsOpen() {return my_file->is_open();}
 
-bool OpenFile(std::string filename, bool overwrite, bool wait_for_file_to_exist = false, bool check_only_the_first_image = false, int eer_super_res_factor = 1, int eer_frames_per_image = 0);
+[OpenFile](OpenFile.md)
 void CloseFile();
 void FlushFile();
 
 % I think this is typicall only called from image methods ReadSlice etc
-[ReadSliceFromDisk](ReadSliceFromDisk.md)
-
-```c++
-:tags: ["margin"]
-inline void ReadSliceFromDisk(int slice_number, float *output_array) {ReadSlicesFromDisk(slice_number, slice_number, output_array);}
-```
+[ReadSliceFromDisk](ReadSliceFromDisk.md) 
 void ReadSlicesFromDisk(int start_slice, int end_slice, float *output_array);
 
 inline void WriteSliceToDisk(int slice_number, float *input_array) {WriteSlicesToDisk(slice_number, slice_number, input_array);}

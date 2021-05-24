@@ -1,5 +1,3 @@
-Discussion
-======================================================
+# <span style="color: #e87502">**Discussions**</span>
 
-
-Nothing to see here yet
+The current documentation can be found at [cisTEM.org](https://cistem.org/documentation)

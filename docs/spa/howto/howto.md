@@ -1,5 +1,3 @@
-How-To Guides
-======================================================
+# <span style="color: #e87502">**How-to guide**</span>
 
-
-Nothing to see here yet
+The current documentation can be found at [cisTEM.org](https://cistem.org/documentation)
