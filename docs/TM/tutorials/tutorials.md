@@ -31,6 +31,9 @@ Because these movies are binned, they are not particularly well compressed, so w
 ```{note}
 You'll need to download the PDB format. Support for PDBx/mmCIF is brewing, but not yet available.
 ```
+```{tip}
+Some pdb files only include coordinates for the asymmetric unit, like 2w0o.pdb apoferritin. When you click to download, select the "Biological Assembly" to get a PDB with all the atoms specified.
+```
 
 ### Pre-process the data
 ---
