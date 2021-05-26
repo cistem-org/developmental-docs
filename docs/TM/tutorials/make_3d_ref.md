@@ -10,8 +10,8 @@ The matched filter is substantially more sensitive to having an accurately calib
 #/bin/bash
 
 
-# Specify where the singularity container is located
-path_to_script="/groups/himesb/notes/cisTEM_20210401"
+# Specify where your alphas version of cisTEM is installed. 
+path_to_cistem="${HOME}/cisTEM_alpha/src"
 
 # Singulatiry can be run with "singularity shell" to give you an "interactive" env in the container.
 # In this example, we instead execute a specific function in the container
@@ -26,9 +26,9 @@ function_to_execute="simulate"
 ################################
 # File things
 ################################
-output_filename="test_bgal.mrc"
-input_pdb_file="bgal_flat.pdb" # the parser is fairly good with PDB format, but will probably break in some cases.
-output_size=320 # pixels - if apix is < 0.5 simulated at this size, if > 0.5 < 1.5 padded internally by 2x and Fourier cropped, > 1.5 apix, padded 4x
+output_filename="2w0o_template.mrc"
+input_pdb_file="2w0o.pdb" # the parser is fairly good with PDB format, but will probably break in some cases.
+output_size=256 # pixels - if apix is < 0.5 simulated at this size, if > 0.5 < 1.5 padded internally by 2x and Fourier cropped, > 1.5 apix, padded 4x
 n_threads=4 # Not so important for a a 3d, it will be fast either way.
 
 
@@ -41,13 +41,13 @@ per_atom_bfactor=4.0 # add any bfactor to all atoms, may need to be increased si
 ################################
 # Imaging things
 ################################
-pixel_size=1.06
-CS=2.7 # mm
+pixel_size=1.5
+CS=0.001 # mm
 KV=300 # kev
 OA=100 # micron, objective aperture won't affect a 3D sim
 
-exposure_per_frame=1 # e-/Ang^2 ;; Dose rate doesn't affect 3D sim (only 2d) here it is used with n_frames to get the total exposure
-n_frames=30
+exposure_per_frame=2 # e-/Ang^2 ;; Dose rate doesn't affect 3D sim (only 2d) here it is used with n_frames to get the total exposure
+n_frames=20
 pre_exposure=0 # If you've left off some early frames, account for that here
 
 
@@ -64,7 +64,7 @@ from_future_args=" --only-modify-signal-3d=2 --wgt=0.225 --water-shell-only"
 # Run the thing
 ################################
 
-${path_to_script} ${from_future_args} << EOF
+${path_to_cistem}/${function_to_execute} ${from_future_args} << EOF
 $output_filename
 $output_size
 $n_threads
