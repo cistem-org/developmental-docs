@@ -6,8 +6,7 @@
 
 To run the simulator or template matching you will need an alpha version of *cis*TEM. For most people, the best choice will be to download a pre-compiled binary, following the instuctions here: [get cistem tutorial](get_cistem.md) For those interested in compiling form source code, you will need to add the "--enable-experimental" flag to your configure line, as well as following the instructions [here.](https://github.com/bHimes/cisTEM_downstream_bah/wiki/Compiling-cisTEM)
 
-
-
+(calc_3d_scattering)=
 ## 2 - Calculate a 3D scattering potential
 
 Simulation in TEM involves describing
@@ -26,6 +25,9 @@ Step one is also the first step in a template matching experiment, were the dete
 * A PDB representing your molecule
 ```{warning}
 Only classic [PDB format](https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)) is supported at the moment. Support for newer PDBx/mmCIF is planned, but in the interm, you will need to manually convert to PDB using a tool like Chimera for example. Simply open your mmCIF and then "save as PDB."
+```
+```{tip}
+Some pdb files only include coordinates for the asymmetric unit, like 2w0o.pdb apoferritin. When you click to download, select the "Biological Assembly" to get a PDB with all the atoms specified.
 ```
 
 After gathering the required materials, you may adapt [the following script](../../TM/tutorials/make_3d_ref.md) to your specific use case.

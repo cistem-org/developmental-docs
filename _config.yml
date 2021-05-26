@@ -11,6 +11,10 @@ exclude_patterns: [README.md, _build, icons]
 sphinx:
   config: 
     suppress_warnings : ["myst.header"]
+    latex_elements:
+        preamble: |
+          \newcommand\angstrom{\mathring{A}}
+          \newcommand\dose{e^-/\mathring{A}^2}
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -37,6 +41,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_issues_button: true
 
 
 # These don't seem to work using the substitution {{ current_alpha_name }} for example
@@ -48,3 +53,16 @@ html:
 #  myst_substitutions:
 #    current_alpha_name: cisTEM_1_0aabb63_20210505.zip
 #    current_alpha_link: [this binary](https://drive.google.com/file/d/1BDQmN3quI-bnOYe23l9p_mb7jWFEGS1f/view?usp=sharing) 
+
+parse:
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    - replacements
+    # - smartquotes
+    - substitution
