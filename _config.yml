@@ -3,7 +3,7 @@
 
 title: dev and user guides
 author: The cisTEM cryoEM Community
-logo: icons/cisTEM.png
+logo: icons/cisTEM_logo_dev.png
 # Patterns to skip when building the book.
 exclude_patterns: [README.md, _build, icons]
 
