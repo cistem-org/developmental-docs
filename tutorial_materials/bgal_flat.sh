@@ -52,7 +52,7 @@ water_scaling=0.0 # Linear scaling of water molecules - normally not used, excep
 # Don't worry about things
 ################################
 # There are some options that I plan to set as default, but due to the way things are written, need to be passed via command line args.
-from_future_args=" --only-modify-signal-3d=2 --wgt=0.225 --water-shel-only"
+from_future_args=" --only-modify-signal-3d=2 --wgt=0.225 --water-shell-only"
 
 ################################
 # Optional things
