@@ -1,2 +1,2 @@
-# <span style="color: #d01010">**How-to guides**</span>
+# <span style="color: darkgreen">**How-to guides**</span>
 
