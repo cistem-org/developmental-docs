@@ -1,3 +1,3 @@
-# <span style="color: #d01010">**Discussions**</span>
+# <span style="color: darkgreen">**Discussions**</span>
 
 *Nothing to see here yet*

@@ -41,6 +41,9 @@ parts:
     - file: docs/dev/howto/ImageProcessing/how_to_image_processing
       sections:
       - file: docs/dev/howto/ImageProcessing/cpu_data_io
+    - file: docs/dev/howto/Utilities/utilities.md
+      sections:
+      - file: docs/dev/howto/Utilities/debugging_profiling.md
 - caption: Single Particle Cryo-EM
   chapters:
   - file: docs/spa/intro

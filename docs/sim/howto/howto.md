@@ -1,4 +1,4 @@
-# <span style="color: darkgreen">**How-to guides**</span>
+# <span style="color: darkred">**How-to guides**</span>
 
 
 *Nothing to see here yet*
