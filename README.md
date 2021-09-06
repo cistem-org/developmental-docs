@@ -20,6 +20,8 @@ You could use conda or whatever you want here.
 Activate the environment (will depend on your env software obviously)
 <code>source .cistemdocs/bin/activate</code>
 
+<code>pip install --upgrade pip</code>
+
 You may not need to uninstall wheel. I had some funny error.
 <code>pip uninstall wheel</code>
 
