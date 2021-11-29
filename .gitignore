@@ -112,3 +112,6 @@ venv.bak/
 
 # Jupyter Book
 _build
+
+# Link to workspace prefs
+.vscode
