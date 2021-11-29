@@ -14,7 +14,7 @@
       {
         "label": "Book_build",
         "type": "shell",
-        "command": "/groups/himesb/.cistemdocs/bin/jupyter-book build --all ./docs && firefox ./docs/_build/html/index.html"
+        "command": "/groups/himesb/.cistemdocs/bin/jupyter-book build ./ --all  && firefox ./_build/html/index.html"
       },
       {
         "label": "Book_publish",
