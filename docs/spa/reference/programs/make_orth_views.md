@@ -3,11 +3,20 @@
 ### *summary*
 ---
 
+Returns an image stack with orthogonal projections of a volume along the cartesian axes.
 
-*###cli options*
+### *cli options*
 ---
 
+**none**
 
-###*interactive options*
+### *interactive options*
 ---
 
+**input_volume**	
+
++ Input image/volume file name.
+	
+**output_image**	
+
++ Output orth views image file name.

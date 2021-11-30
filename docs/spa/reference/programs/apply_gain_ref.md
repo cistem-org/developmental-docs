@@ -3,6 +3,17 @@
 ### *summary*
 ---
 
+Apply a gain reference, and optionally a dark reference, to a set of images. 
+
+This program also can apply other statistical preprocessing, including:
+ + removing outliers (based on a Gaussian distribution)
+ + normalizing the image (by subtracting the mean and dividing by the standard deviation)
+
+Finally, the pixel size (sampling rate) of the image may be changed by resizing. Here the, resizing is carried out in Fourier space, such that the new pixel size is given by:
+
+```code
+new_pixel_size = old_pixel_size * (old_size / new_size)
+```
 
 ### *cli options*
 ---
@@ -28,29 +39,63 @@
 
  - Also do dark correction? If yes, you can provide a dark image to be subtracted:
 
-    **input_dark_filename**			
+````{panels}
 
-     - Input dark ref file", "Filename of dark reference", "dark.mrc", true );
+```python
+if (Yes)
+```
+
+---
+
+**input_dark_filename**			
+
++ Filename of dark reference.
+
+````
+
+
 	
 **should_resample**        
 
  - Resample the output? If yes, you can resample the output to a different size
 
-    **new_x_size**         
+````{panels}
 
-     - Wanted New X-Size. The image will be Fourier cropped to this size
+```python
+if (Yes)
+```
 
-		**new_y_size**                 
+---
 
-     - Wanted New Y-Size. The image will be Fourier cropped to this size
+
+**new_x_size**         
+
++ Wanted New X-Size. The image will be Fourier cropped to this size
+
+
+**new_y_size**                 
+
++ Wanted New Y-Size. The image will be Fourier cropped to this size
+
+````
 
 **should_remove_outliers**    
 
- - Remove outlier pixels? If yes, outlier pixels will be removed AFTER gain correction, but prior to resa
+ - Remove outlier pixels? If yes, outlier pixels will be removed AFTER gain correction, but prior to resampling
+ 
+````{panels}
 
-		**num_sigmas**		
+```python
+if (Yes)
+```
 
-     - Pixels more than this number of standard deviations above or below the mean will be reset to the mean
+---
+
+
+**num_sigmas**		
+
+- Pixels more than this number of standard deviations above or below the mean will be reset to the mean
+````
 
 **zero_float_and_normalize**	
 

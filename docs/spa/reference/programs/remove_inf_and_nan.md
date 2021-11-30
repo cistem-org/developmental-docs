@@ -3,11 +3,20 @@
 ### *summary*
 ---
 
+Remove any infinite or NaN values from a volume.
 
-*###cli options*
+### *cli options*
 ---
 
+**none**
 
-###*interactive options*
+### *interactive options*
 ---
 
+**input_filename**
+  
++ Filename of input image.
+
+**output_filename**
+  
++ Filename of output image which should have no infs or nans.

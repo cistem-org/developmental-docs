@@ -3,11 +3,24 @@
 ### *summary*
 ---
 
+Convert a TIF file to a MRC file.
 
-*###cli options*
+```{note}
+There is a convert EER to MRC program available in the newer alpha versions.
+```
+
+### *cli options*
 ---
 
+**none**
 
-###*interactive options*
+### *interactive options*
 ---
 
+**input_filename**		
+
++ Filename of input TIF image.
+
+**output_filename**	
+
++ Filename of output MRC image.

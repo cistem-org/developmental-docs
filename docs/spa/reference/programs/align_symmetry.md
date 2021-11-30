@@ -3,7 +3,7 @@
 ### *summary*
 ---
 
-This program attempts to align an unsymmetryized volume to a symmetry axes that corresponds to the definitions used in **cis**TEM. 
+This program attempts to align an unsymmetryized volume to a symmetry axes that corresponds to the definitions used in *cis*TEM. 
 
 ### *cli options*
 ---
