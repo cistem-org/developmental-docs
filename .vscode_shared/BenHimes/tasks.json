@@ -19,7 +19,7 @@
       {
         "label": "Book_publish",
         "type": "shell",
-        "command": "cd docs && /groups/himesb/.cistemdocs/bin/ghp-import -n -p -f _build/html ; cd .."
+        "command": "/groups/himesb/.cistemdocs/bin/ghp-import -n -p -f _build/html ; cd .."
       },
       {
         "label": "echo",
