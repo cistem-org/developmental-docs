@@ -51,6 +51,45 @@ parts:
     - file: docs/spa/user_guides/chapter1
   - file: docs/spa/tutorials/tutorials
   - file: docs/spa/reference/reference
+    sections:
+    - file: docs/spa/reference/programs/programs
+      sections:
+      - file: docs/spa/reference/programs/align_symmetry
+      - file: docs/spa/reference/programs/applyctf
+      - file: docs/spa/reference/programs/apply_gain_ref
+      - file: docs/spa/reference/programs/apply_mask
+      - file: docs/spa/reference/programs/calc_occ
+      - file: docs/spa/reference/programs/calculate_fsc
+      - file: docs/spa/reference/programs/cisTEM
+      - file: docs/spa/reference/programs/cisTEM_job_control
+      - file: docs/spa/reference/programs/console_test
+      - file: docs/spa/reference/programs/convert_tif_to_mrc
+      - file: docs/spa/reference/programs/ctffind
+      - file: docs/spa/reference/programs/display
+      - file: docs/spa/reference/programs/estimate_dataset_ssnr
+      - file: docs/spa/reference/programs/extract_particles
+      - file: docs/spa/reference/programs/find_particles
+      - file: docs/spa/reference/programs/mag_distortion_correct
+      - file: docs/spa/reference/programs/make_orth_views
+      - file: docs/spa/reference/programs/make_size_map
+      - file: docs/spa/reference/programs/merge2d
+      - file: docs/spa/reference/programs/merge3d
+      - file: docs/spa/reference/programs/montage
+      - file: docs/spa/reference/programs/prepare_stack
+      - file: docs/spa/reference/programs/project3d
+      - file: docs/spa/reference/programs/reconstruct3d
+      - file: docs/spa/reference/programs/refine2d
+      - file: docs/spa/reference/programs/refine3d
+      - file: docs/spa/reference/programs/remove_inf_and_nan
+      - file: docs/spa/reference/programs/remove_outlier_pixels
+      - file: docs/spa/reference/programs/resample
+      - file: docs/spa/reference/programs/reset_mrc_header
+      - file: docs/spa/reference/programs/resize
+      - file: docs/spa/reference/programs/scale_with_mask
+      - file: docs/spa/reference/programs/sharpen_map
+      - file: docs/spa/reference/programs/sum_all_mrc_files
+      - file: docs/spa/reference/programs/sum_all_tif_files
+      - file: docs/spa/reference/programs/unblur
   - file: docs/spa/discussions/discussions
   - file: docs/spa/howto/howto
 - caption: Tomography
