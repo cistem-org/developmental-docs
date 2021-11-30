@@ -3,7 +3,7 @@
 ### *summary*
 ---
 
-Returns an image stack with orthogonal projections of a volume along the cartesian axes.
+Returns an image stack with orthogonal projections of a volume along the cartesian axes as well as slices through the volume along those axes.
 
 ### *cli options*
 ---
