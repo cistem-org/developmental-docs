@@ -1,6 +1,6 @@
 # The current deployed docs
 
-You can check out the statically hosted [build here.](https://bhimes.github.io/cisTEM_docs/docs/sim/tutorials/tutorials.html)
+You can check out the statically hosted [build here.](https://bhimes.github.io/cisTEM_docs/intro.html)
 
 # Adding to the docs
 
