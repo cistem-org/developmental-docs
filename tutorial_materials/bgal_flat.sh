@@ -3,6 +3,7 @@
 
 # Specify where your alphas version of cisTEM is installed. 
 path_to_cistem="${HOME}/cisTEM_alpha/src"
+
 # Singulatiry can be run with "singularity shell" to give you an "interactive" env in the container.
 # In this example, we instead execute a specific function in the container
 function_to_execute="simulate"
