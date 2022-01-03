@@ -32,7 +32,15 @@ parts:
     sections:
     - file: docs/dev/reference/alphabetical
     - file: docs/dev/reference/classes/intro
+    - file: docs/dev/reference/testing
+      sections:
+      - file: docs/dev/reference/testing/unit_tests
+      - file: docs/dev/reference/testing/integration_tests
+      - file: docs/dev/reference/testing/regression_tests
+      - file: docs/dev/reference/testing/continuous_integration
   - file: docs/dev/discussions/discussions
+    sections:
+    - file: docs/dev/discussions/testing
   - file: docs/dev/howto/howto
     sections:
     - file: docs/dev/howto/Collaboration/intro
