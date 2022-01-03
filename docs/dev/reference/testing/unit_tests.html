@@ -1,0 +1,1811 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Tests &#8212; dev and user guides</title>
+    
+  <link href="../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Integration Tests" href="integration_tests.html" />
+    <link rel="prev" title="Testing" href="../testing.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../index.html">
+      
+      <img src="../../../../_static/cisTEM_logo_dev.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">dev and user guides</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../../intro.html">
+   Welcome to your source for info about cisTEM
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Simulation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../sim/intro.html">
+   <span style="color: darkred">
+    <strong>
+     Intro
+    </strong>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../sim/tutorials/tutorials.html">
+   <span style="color: darkred">
+    <em>
+     <strong>
+      Tutorials
+     </strong>
+    </em>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../sim/reference/reference.html">
+   <span style="color: darkred">
+    <strong>
+     Reference
+    </strong>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../sim/discussions/discussions.html">
+   <span style="color: darkred">
+    <strong>
+     Discussions
+    </strong>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../sim/howto/howto.html">
+   <span style="color: darkred">
+    <strong>
+     How-to guides
+    </strong>
+   </span>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  in situ particle detection
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../TM/intro.html">
+   <span style="color: #e87502">
+    <strong>
+     Intro
+    </strong>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../TM/tutorials/tutorials.html">
+   <span style="color: #e87502">
+    <em>
+     <strong>
+      Tutorials
+     </strong>
+    </em>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../TM/reference/reference.html">
+   <span style="color: #e87502">
+    <strong>
+     Reference
+    </strong>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../TM/discussions/discussions.html">
+   <span style="color: #e87502">
+    <strong>
+     Discussions
+    </strong>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../TM/howto/howto.html">
+   <span style="color: #e87502">
+    <strong>
+     How-to guides
+    </strong>
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Development
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   <span style="color: darkgreen">
+    <strong>
+     Intro
+    </strong>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tutorials/tutorials.html">
+   <span style="color: darkgreen">
+    <em>
+     <strong>
+      Tutorials
+     </strong>
+    </em>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../reference.html">
+   <span style="color: darkgreen">
+    <strong>
+     Reference
+    </strong>
+   </span>
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../alphabetical.html">
+     <strong>
+      Methods (alphabetical)
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/intro.html">
+     <strong>
+      Classes
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../testing.html">
+     <strong>
+      Testing
+     </strong>
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       <em>
+        Unit Tests
+       </em>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="integration_tests.html">
+       <em>
+        Integration Tests
+       </em>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="regression_tests.html">
+       <em>
+        Regression Tests
+       </em>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="continuous_integration.html">
+       <em>
+        CI
+       </em>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../discussions/discussions.html">
+   <span style="color: darkgreen">
+    <strong>
+     Discussions
+    </strong>
+   </span>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../discussions/testing.html">
+     <span style="color: darkgreen">
+      <strong>
+       Testing
+      </strong>
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../howto/howto.html">
+   <span style="color: darkgreen">
+    <strong>
+     How-to guides
+    </strong>
+   </span>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../howto/Collaboration/intro.html">
+     collaborate with us
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../howto/Collaboration/git_workflow.html">
+       Git workflow
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../howto/ImageProcessing/how_to_image_processing.html">
+     build image processing progs
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../howto/ImageProcessing/cpu_data_io.html">
+       CPU data io
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../howto/Utilities/utilities.html">
+     Utilities
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../howto/Utilities/debugging_profiling.html">
+       Simple debugging and profiling
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Single Particle Cryo-EM
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../spa/intro.html">
+   <span style="color: #0048d8">
+    <strong>
+     Intro
+    </strong>
+   </span>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../spa/tutorials/tutorials.html">
+   <span style="color: #0048d8">
+    <em>
+     <strong>
+      Tutorial
+     </strong>
+    </em>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../spa/reference/reference.html">
+   <span style="color: #0048d8">
+    <strong>
+     Reference
+    </strong>
+   </span>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../spa/reference/programs/programs.html">
+     <span style="color: #0048d8">
+      <strong>
+       Programs (in cisTEM beta)
+      </strong>
+     </span>
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/align_symmetry.html">
+       <span style="color: #0048d8">
+        <strong>
+         align_symmetry
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/applyctf.html">
+       <span style="color: #0048d8">
+        <strong>
+         applyctf
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/apply_gain_ref.html">
+       <span style="color: #0048d8">
+        <strong>
+         apply_gain_ref
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/apply_mask.html">
+       <span style="color: #0048d8">
+        <strong>
+         apply_mask
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/calc_occ.html">
+       <span style="color: #0048d8">
+        <strong>
+         calc_occ
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/calculate_fsc.html">
+       <span style="color: #0048d8">
+        <strong>
+         calculate_fsc
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/console_test.html">
+       <span style="color: #0048d8">
+        <strong>
+         console_test
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/convert_tif_to_mrc.html">
+       <span style="color: #0048d8">
+        <strong>
+         convert_tif_to_mrc
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/ctffind.html">
+       <span style="color: #0048d8">
+        <strong>
+         ctffind
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/estimate_dataset_ssnr.html">
+       <span style="color: #0048d8">
+        <strong>
+         estimate_dataset_ssnr
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/extract_particles.html">
+       <span style="color: #0048d8">
+        <strong>
+         extract_particles
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/find_particles.html">
+       <span style="color: #0048d8">
+        <strong>
+         find_particles
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/mag_distortion_correct.html">
+       <span style="color: #0048d8">
+        <strong>
+         mag_distortion_correct
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/make_orth_views.html">
+       <span style="color: #0048d8">
+        <strong>
+         make_orth_views
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/make_size_map.html">
+       <span style="color: #0048d8">
+        <strong>
+         make_size_map
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/merge2d.html">
+       <span style="color: #0048d8">
+        <strong>
+         merge2d
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/merge3d.html">
+       <span style="color: #0048d8">
+        <strong>
+         merge3d
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/montage.html">
+       <span style="color: #0048d8">
+        <strong>
+         montage
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/prepare_stack.html">
+       <span style="color: #0048d8">
+        <strong>
+         prepare_stack
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/project3d.html">
+       <span style="color: #0048d8">
+        <strong>
+         project3d
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/reconstruct3d.html">
+       <span style="color: #0048d8">
+        <strong>
+         reconstruct3d
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/refine2d.html">
+       <span style="color: #0048d8">
+        <strong>
+         refine2d
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/refine3d.html">
+       <span style="color: #0048d8">
+        <strong>
+         refine3d
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/remove_inf_and_nan.html">
+       <span style="color: #0048d8">
+        <strong>
+         remove_inf_and_nan
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/resample.html">
+       <span style="color: #0048d8">
+        <strong>
+         resample
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/reset_mrc_header.html">
+       <span style="color: #0048d8">
+        <strong>
+         reset_mrc_header
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/resize.html">
+       <span style="color: #0048d8">
+        <strong>
+         resize
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/scale_with_mask.html">
+       <span style="color: #0048d8">
+        <strong>
+         scale_with_mask
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/sharpen_map.html">
+       <span style="color: #0048d8">
+        <strong>
+         sharpen_map
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/sum_all_mrc_files.html">
+       <span style="color: #0048d8">
+        <strong>
+         sum_all_mrc_files
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/sum_all_tif_files.html">
+       <span style="color: #0048d8">
+        <strong>
+         sum_all_tif_files
+        </strong>
+       </span>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../spa/reference/programs/unblur.html">
+       <span style="color: #0048d8">
+        <strong>
+         unblur
+        </strong>
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../spa/discussions/discussions.html">
+   <span style="color: #0048d8">
+    <strong>
+     Discussions
+    </strong>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../spa/howto/howto.html">
+   <span style="color: #0048d8">
+    <strong>
+     How-to guide
+    </strong>
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tomography
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../tomo/intro.html">
+   <span style="color: #5d02a5">
+    <strong>
+     Intro
+    </strong>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../tomo/tutorials/tutorials.html">
+   <span style="color: #5d02a5">
+    <em>
+     <strong>
+      Tutorials
+     </strong>
+    </em>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../tomo/reference/reference.html">
+   <span style="color: #5d02a5">
+    <em>
+     <strong>
+      Reference
+     </strong>
+    </em>
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../tomo/discussions/discussions.html">
+   <span style="color: #6805b6">
+    <strong>
+     Discussions
+    </strong>
+   </span>
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tomo/discussions/ctftilt.html">
+     Measuring the defocus in images of tilted specimen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../tomo/howto/howto.html">
+   <span style="color: #5d02a5">
+    <strong>
+     How-to guides
+    </strong>
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../../_appendix.html">
+   Supress warnings - not intended for readers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../TM/tutorials/make_3d_ref.html">
+     3d reference script
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/Image/QuickAndDirtyReadSlice.html">
+     Title
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/MRCFile/MRCFile.html">
+     MRCFile
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/MRCFile/OpenFile.html">
+     Description
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/MRCFile/ReadSliceFromDisk.html">
+     Description
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../sim/tutorials/get_cistem.html">
+     <em>
+      Download an Install
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/docs/dev/reference/testing/unit_tests.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/bHimes/cisTEM_docs"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/bHimes/cisTEM_docs/issues/new?title=Issue%20on%20page%20%2Fdocs/dev/reference/testing/unit_tests.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <em>
+    Unit Tests
+   </em>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testmrcfunctions">
+   TestMRCFunctions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functionality-tested">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#depends-on">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testassignmentoperatorsandfunctions">
+   TestAssignmentOperatorsAndFunctions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testfftfunctions">
+   TestFFTFunctions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testscalingandsizingfunctions">
+   TestScalingAndSizingFunctions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testfilterfunctions">
+   TestFilterFunctions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testalignmentfunctions">
+   TestAlignmentFunctions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testimagearithmeticfunctions">
+   TestImageArithmeticFunctions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testspectrumboxconvolution">
+   TestSpectrumBoxConvolution
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testimageloopingandaddressing">
+   TestImageLoopingAndAddressing
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testnumerictextfiles">
+   TestNumericTextFiles
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testclipintofourier">
+   TestClipIntoFourier
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id20">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testmaskcentralcross">
+   TestMaskCentralCross
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id21">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id22">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teststartobinaryfileconversion">
+   TestStarToBinaryFileConversion
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id23">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id24">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testelectronexposurefilter">
+   TestElectronExposureFilter
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id25">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id26">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testempiricaldistribution">
+   TestEmpiricalDistribution
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id27">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id28">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testsumofsquaresfourierandfftnormalization">
+   TestSumOfSquaresFourierAndFFTNormalization
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id29">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id30">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testrandomvariablefunctions">
+   TestRandomVariableFunctions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id31">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id32">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testintegershifts">
+   TestIntegerShifts
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id33">
+     Functionality Tested:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id34">
+     Depends on:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="unit-tests">
+<h1><em>Unit Tests</em><a class="headerlink" href="#unit-tests" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="testmrcfunctions">
+<h1>TestMRCFunctions<a class="headerlink" href="#testmrcfunctions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="functionality-tested">
+<h2>Functionality Tested:<a class="headerlink" href="#functionality-tested" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Open a file with .mrc extension</p></li>
+<li><p>Check if the file is a valid MRC file</p></li>
+<li><p>Read and store the header information</p></li>
+<li><p>Read and store the image data</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>This only tests the original reading of data from MRC mode (TODO: list) and storing as 32 bit float.</p></li>
+<li><p>Aside from the raw data stream, this also adds/removes padding for in place FFTs which is not currently tested</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="depends-on">
+<h2>Depends on:<a class="headerlink" href="#depends-on" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>MRCFile::OpenFile</p></li>
+<li><p>MRCFile::ReadSlice</p></li>
+<li><p>Artifact: hiv_images_80x80x10</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testassignmentoperatorsandfunctions">
+<h1>TestAssignmentOperatorsAndFunctions<a class="headerlink" href="#testassignmentoperatorsandfunctions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Functionality Tested:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Copy an Image object and it’s data into this Image, when the memory for this Image is not allocated.</p></li>
+<li><p>Copy an Image object and it’s data into this Image, when the memory for this Image is allocated, and is a different size, such that it must first be deallocated.</p></li>
+<li><p>Call the Image::CopyFrom method, which just invokes the operator</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span> <span class="o">&amp;</span> <span class="n">Image</span><span class="o">::</span><span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="k">const</span> <span class="n">Image</span> <span class="o">*</span><span class="n">other_image</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Assign by reference, which then also invokes the same operator as CopyFrom:</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span> <span class="o">&amp;</span> <span class="n">Image</span><span class="o">::</span><span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="k">const</span> <span class="n">Image</span> <span class="o">&amp;</span><span class="n">other_image</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="o">*</span><span class="k">this</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">other_image</span><span class="p">;</span>
+	<span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Unlike the previous tests, the Image::Consume method directly steals the memory pointed to by the other image.</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>Depends on:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::Allocate</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Allocate method is not currently tested and does some fairly complicated things:</p>
+<ul class="simple">
+<li><p>Mutex lock for FFT plan generation</p></li>
+<li><p>Allocating memory including the proper padding</p></li>
+<li><p>Asserting data memory is not currently allocated, and calling Image::Deallocate if needed</p></li>
+<li><p>No asserts in place to confirm proper memory alignment either.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testfftfunctions">
+<h1>TestFFTFunctions<a class="headerlink" href="#testfftfunctions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id3">
+<h2>Functionality Tested:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>We really only every use the MKL routines so FFTW3 is not tested nearly so well.</p></li>
+<li><p>Because FFTW3 is GPL3 the FFTW3 routines need to be replaced with the equivalent MKL calls to be compatible with the current cisTEM license. Right now, they effectively only serve as a placeholder so the MKL knows where to wrap in their own routines, however, to be thorough, these should be</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>Image::ForwardFFT</p>
+<ul>
+<li><p>Inplace, single precision R2C using either FFTW3 or Intel MKL</p></li>
+</ul>
+</li>
+<li><p>Image::BackwardFFT</p></li>
+<li><p>RemoveFFTWPadding</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>Depends on:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>MRCFile::OpenFile</p></li>
+<li><p>MRCFile::ReadSlice</p></li>
+<li><p>Image::SetToConstant</p></li>
+<li><p>Artifact: sine_wave_128x128x1</p></li>
+</ul>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="testscalingandsizingfunctions">
+<span id="scaling-and-sizing-label"></span><h1>TestScalingAndSizingFunctions<a class="headerlink" href="#testscalingandsizingfunctions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id5">
+<h2>Functionality Tested:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::ClipInto</p>
+<ul>
+<li><p>test real space clipping into a larger image.</p></li>
+<li><p>test real space clipping into a smaller image.</p></li>
+<li><p>test Fourier space clipping into a larger image.</p></li>
+<li><p>test Fourier space clipping into a smaller image.</p></li>
+<li><p>test real space clipping smaller to odd</p></li>
+<li><p>test fourier space flipping smaller to odd</p></li>
+</ul>
+</li>
+<li><p>Image::Resize</p>
+<ul>
+<li><p>Real space big</p></li>
+<li><p>Real space small</p></li>
+<li><p>Fourier space big</p></li>
+<li><p>Fourier space small</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>Depends on:<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>MRCFile::OpenFile</p></li>
+<li><p>MRCFile::ReadSlice</p></li>
+<li><p>Image::ForwardFFT</p></li>
+<li><p>Image::Consume</p>
+<ul>
+<li><p>Tested in “Memory Assignment Ops and Funcs”</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testfilterfunctions">
+<h1>TestFilterFunctions<a class="headerlink" href="#testfilterfunctions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id7">
+<h2>Functionality Tested:<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::ApplyBFactor</p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h2>Depends on:<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>MRCFile::OpenFile</p></li>
+<li><p>MRCFile::ReadSlice</p></li>
+<li><p>Image::ForwardFFT</p></li>
+<li><p>Image::BackwardFFT</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testalignmentfunctions">
+<h1>TestAlignmentFunctions<a class="headerlink" href="#testalignmentfunctions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id9">
+<h2>Functionality Tested:<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::PhaseShift</p></li>
+<li><p>Image::CalculateCrossCorrelationImageWith</p></li>
+<li><p>Image::FindPeakWithIntegerCoordinates</p></li>
+<li><p>Image::FindPeakWithParabolaFit</p></li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h2>Depends on:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>MRCFile::OpenFile</p></li>
+<li><p>MRCFile::ReadSlice</p></li>
+<li><p>Image::ForwardFFT</p></li>
+<li><p>Image::BackwardFFT</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testimagearithmeticfunctions">
+<h1>TestImageArithmeticFunctions<a class="headerlink" href="#testimagearithmeticfunctions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id11">
+<h2>Functionality Tested:<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::AddImage</p></li>
+<li><p>Image::SetToConstant</p></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h2>Depends on:<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testspectrumboxconvolution">
+<h1>TestSpectrumBoxConvolution<a class="headerlink" href="#testspectrumboxconvolution" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id13">
+<h2>Functionality Tested:<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::SpectrumBoxConvolution</p></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h2>Depends on:<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>MRCFile::OpenFile</p></li>
+<li><p>MRCFile::ReadSlice</p></li>
+<li><p>Image::ForwardFFT</p></li>
+<li><p>Image::BackwardFFT</p></li>
+<li><p>Artifact: hiv_image_80x80x1_filename</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testimageloopingandaddressing">
+<h1>TestImageLoopingAndAddressing<a class="headerlink" href="#testimageloopingandaddressing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id15">
+<h2>Functionality Tested:<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::LoopingAndAddressing</p></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h2>Depends on:<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testnumerictextfiles">
+<h1>TestNumericTextFiles<a class="headerlink" href="#testnumerictextfiles" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id17">
+<h2>Functionality Tested:<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>NumericTextFile::Init</p></li>
+<li><p>NumericTextFile::ReadLine</p></li>
+<li><p>NumericTextFile::WriteLine</p></li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h2>Depends on:<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>none</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testclipintofourier">
+<h1>TestClipIntoFourier<a class="headerlink" href="#testclipintofourier" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id19">
+<h2>Functionality Tested:<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>test Fourier space clipping into a larger image.</p>
+<ul>
+<li><p>I think this tests redundant functionality, albeit with a different approach from the other clip into tests <a class="reference internal" href="#scaling-and-sizing-label"><span class="std std-ref">TestScalingAndSizingFunction</span></a>, TODO: verify</p></li>
+</ul>
+</li>
+<li><p>test with odd dimensions into even dimensions</p></li>
+<li><p>test with even dimensions into odd dimensions</p>
+<ul>
+<li><p>I think these tests are unique compared to <a class="reference internal" href="#scaling-and-sizing-label"><span class="std std-ref">TestScalingAndSizingFunction</span></a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h2>Depends on:<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>MRCFile::OpenFile</p></li>
+<li><p>MRCFile::ReadSlice</p></li>
+<li><p>Image::ForwardFFT</p></li>
+<li><p>Image::BackwardFFT</p></li>
+<li><p>Image::SetToConstant</p></li>
+<li><p>Image::CopyFrom</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Depends on currently untested methods.</p>
+<ul class="simple">
+<li><p>Image::AddGaussianNoise // TODO: Swap this for the STD functions and note that dependency.</p></li>
+<li><p>Image::ComputeAmplitudeSpectrum</p></li>
+</ul>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testmaskcentralcross">
+<h1>TestMaskCentralCross<a class="headerlink" href="#testmaskcentralcross" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id21">
+<h2>Functionality Tested:<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::MaskCentralCross</p></li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h2>Depends on:<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::SetToConstant</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="teststartobinaryfileconversion">
+<h1>TestStarToBinaryFileConversion<a class="headerlink" href="#teststartobinaryfileconversion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id23">
+<h2>Functionality Tested:<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>cisTEMParameters::cisTEMParameters</p></li>
+<li><p>cisTEMParameterLine::cisTEMParemeterLine</p></li>
+<li><p>cisTEMParameters::parameters_to_write::SetAllToTrue</p></li>
+<li><p>cisTEMParameters::WriteTocisTEMStarFile</p></li>
+<li><p>cisTEMParameters::WriteTocisTEMBinaryFile</p></li>
+<li><p>cisTEMParameters::ClearAll</p></li>
+<li><p>cisTEMParameters::ReadFromcisTEMBinaryFile</p></li>
+<li><p>cisTEMParameters::ReturnFileSizeInBytes</p></li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h2>Depends on:<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>wxFileName::GetTempDir();</p></li>
+<li><p>Return value from cisTEMParameters::WriteTocisTEMStarFile so the line with cisTEM version and datetime is ignored</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>  <span class="o">-</span> <span class="kt">int</span> <span class="n">header_bytes_to_ignore</span> <span class="o">=</span> <span class="n">cisTEMParameters</span><span class="p">.</span><span class="n">WriteTocisTEMStarFile</span><span class="p">(</span><span class="n">star_from_binary_filename</span><span class="p">.</span><span class="n">ToStdString</span><span class="p">().</span><span class="n">c_str</span><span class="p">());</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testelectronexposurefilter">
+<h1>TestElectronExposureFilter<a class="headerlink" href="#testelectronexposurefilter" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id25">
+<h2>Functionality Tested:<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>ElectronDose::CalculateDoseFilterAs1DArray</p></li>
+</ul>
+</div>
+<div class="section" id="id26">
+<h2>Depends on:<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>ZeroFloatArray is not currently tested.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testempiricaldistribution">
+<h1>TestEmpiricalDistribution<a class="headerlink" href="#testempiricaldistribution" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id27">
+<h2>Functionality Tested:<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::ReturnDistributionOfRealValues</p></li>
+<li><p>EmpiricalDistribution::GetSampleMean</p></li>
+<li><p>EmpiricalDistribution::GetSampleVariance</p></li>
+<li><p>EmpiricalDistribution::GetMinimum</p></li>
+<li><p>EmpiricalDistribution::GetMaximum</p></li>
+<li><p>EmpiricalDistribution::GetSampleSumOfSquares</p></li>
+</ul>
+</div>
+<div class="section" id="id28">
+<h2>Depends on:<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>MRCFile::OpenFile</p></li>
+<li><p>MRCFile::ReadSlice</p></li>
+<li><p>Artifact: hiv_image_80x80x1</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testsumofsquaresfourierandfftnormalization">
+<h1>TestSumOfSquaresFourierAndFFTNormalization<a class="headerlink" href="#testsumofsquaresfourierandfftnormalization" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id29">
+<h2>Functionality Tested:<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::ReturnSumOfSquares</p>
+<ul>
+<li><p>In Fourier space without any DFT normalization.</p></li>
+<li><p>In Fourier space with DFT normalization after the forward transform.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id30">
+<h2>Depends on:<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>MRCFile::OpenFile</p></li>
+<li><p>MRCFile::ReadSlice</p></li>
+<li><p>Image::ForwardFFT</p></li>
+<li><p>Image::BackwardFFT</p></li>
+<li><p>Artifact: hiv_image_80x80x1</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testrandomvariablefunctions">
+<h1>TestRandomVariableFunctions<a class="headerlink" href="#testrandomvariablefunctions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id31">
+<h2>Functionality Tested:<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::AddNoise called via the following methods:</p>
+<ul>
+<li><p>Image::AddNoiseFromUniformDistribution</p></li>
+<li><p>Image::AddNoiseFromNormalDistribution</p></li>
+<li><p>Image::AddNoiseFromPoissonDistribution</p></li>
+<li><p>Image::AddNoiseFromGammaDistribution</p></li>
+<li><p>Image::AddNoiseFromExponentialDistribution</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id32">
+<h2>Depends on:<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::ReturnDistributionOfRealValues</p></li>
+<li><p>EmpiricalDistribution::UpdateDistributionOfRealValues</p></li>
+<li><p>EmpiricalDistribution::GetSampleVariance</p></li>
+<li><p>EmpiricalDistribution::GetMinimum</p></li>
+<li><p>EmpiricalDistribution::GetMaximum</p></li>
+<li><p>EmpiricalDistribution::GetSampleSumOfSquares</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="testintegershifts">
+<h1>TestIntegerShifts<a class="headerlink" href="#testintegershifts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id33">
+<h2>Functionality Tested:<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::RotateInPlaceAboutZBy90Degrees(rotate_by_positive_90_degrees)</p>
+<ul>
+<li><p>For +90 rotation (in memory)</p></li>
+<li><p>For -90 rotation (in memory)</p></li>
+<li><p>For +90 rotation (in memory, with shift in x + 1 to maintain origin)</p></li>
+<li><p>For -90 rotation (in memory, with shift in y + 1 to maintain origin)</p></li>
+</ul>
+</li>
+<li><p>Image::RealSpaceIntegerShift(-1,0,0);</p></li>
+</ul>
+</div>
+<div class="section" id="id34">
+<h2>Depends on:<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Image::CopyFrom (TestAssignmentOperatorsAndFunctions)</p></li>
+</ul>
+<hr class="docutils" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/dev/reference/testing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../testing.html" title="previous page"><strong>Testing</strong></a>
+    <a class='right-next' id="next-link" href="integration_tests.html" title="next page"><em>Integration Tests</em></a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The cisTEM cryoEM Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
