@@ -15,6 +15,7 @@ sphinx:
         preamble: |
           \newcommand\angstrom{\mathring{A}}
           \newcommand\dose{e^-/\mathring{A}^2}
+    html_extra_path: ['assets']
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
