@@ -1,6 +1,6 @@
 # The current deployed docs
 
-You can check out the statically hosted [build here.](https://bhimes.github.io/cisTEM_docs/intro.html)
+You can check out the statically hosted [build here.](https://cistem-org.github.io/developmental-docs/intro.html)
 
 # Adding to the docs
 
