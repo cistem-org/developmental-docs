@@ -1,0 +1,69 @@
+title cisTEM Job control
+
+
+GUI->*job_control:Launch
+job_control-->GUI:Connect
+GUI-->job_control:**please_identify**
+job_control-->GUI:**sending_identification**
+GUI-->job_control:**you_are_connected**
+job_control-->GUI:**send_job_details**
+GUI-->job_control:**sending_job_package**
+GUI-->job_control: //Job package [Run profile/jobs]//
+
+box over job_control: Launch Server thread
+job_control->*Worker1(Master):Launch
+job_control->*Worker2:Launch
+
+Worker1(Master)-->job_control:Connect
+job_control-->Worker1(Master):**please_identify**
+Worker1(Master)-->job_control:**sending_identification**
+job_control-->Worker1(Master):**you_are_the_master**
+job_control-->Worker1(Master)://Job package//
+box over Worker1(Master): Launch Server thread
+box over Worker1(Master): Launch Worker thread
+
+Worker2-->job_control:Connect
+job_control-->Worker2:**please_identify**
+Worker2-->job_control:**sending_identification**
+job_control-->Worker2:**you_are_a_worker**
+job_control-->Worker2://Master ip and port//
+
+
+Worker2-->Worker1(Master):Connect
+Worker1(Master)-->Worker2:**please_identify**
+Worker2-->Worker1(Master):**sending_identification**
+Worker1(Master)-->Worker2:**you_are_a_connected**
+box over Worker2: Launch Worker thread
+Worker2-->Worker1(Master):**send_next_job**
+Worker2-->Worker1(Master)://dummy result//
+Worker1(Master)-->Worker2:**ready_to_send_single_job**
+Worker1(Master)-->Worker2://Job1//
+
+
+
+Worker2->Worker2:DoCalculation()
+Worker2-->Worker1(Master):**send_next_job**
+Worker2-->Worker1(Master)://Result of Job1//
+
+Worker1(Master)-->job_control:**job_result**
+Worker1(Master)-->job_control://Result of Job1//
+
+job_control-->GUI:**job_result**
+job_control-->GUI://Result of Job1//
+
+Worker1(Master)-->Worker2:**ready_to_send_single_job**
+Worker1(Master)-->Worker2://Job2//
+Worker2->Worker2:DoCalculation()
+Worker2-->Worker1(Master):**send_next_job**
+Worker2-->Worker1(Master)://Result of Job2//
+
+Worker1(Master)-->job_control:**job_result**
+Worker1(Master)-->job_control://Result of Job2//
+
+job_control-->GUI:**job_result**
+job_control-->GUI://Result of Job2//
+
+Worker1(Master)-->Worker2:**time_to_die**
+box over Worker2: Exit
+
+
