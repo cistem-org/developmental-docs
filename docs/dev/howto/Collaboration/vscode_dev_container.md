@@ -113,7 +113,6 @@ Depending on your internet connection, this may take a little while as the docke
     ```bash
     # cisTEM uses gnu auto tools as a build chain. You must run the following script on any new clone of the repo, addition of any new .m4 scripts, or any modification to configure.ac. Have a look at the source if you are curious.
     ./regenerate_project.b
-    ./regenerate_project.b
     ```
 
 - Configure the type of build you want for cisTEM.
@@ -127,5 +126,5 @@ Depending on your internet connection, this may take a little while as the docke
   - **ctrl+shift+p** and type **Tasks: Run Task**
   - Select **Build cisTEM**
     - Defaults to 8 threads. 
-        - More is better.
+        - More is often better, but benefits will propably diminish if you exceed the number of physical cores on your cpu.
 
