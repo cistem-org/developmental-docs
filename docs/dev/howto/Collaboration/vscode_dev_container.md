@@ -75,7 +75,10 @@ The binaries you compile with the default dev container will run ***outside*** t
 ### Install the cisTEM source code
 
 ```bash
+# cisTEM is a fairly large project. The compiler can be dramatically slowed down when parsing the headers on slow file systems.
+# Choose the location for your cisTEM project with this in mind.
 git clone git@github.com:timothygrant80/cisTEM.git
+cd cisTEM
 ```
 
 ## **Building the development container**
@@ -83,8 +86,11 @@ git clone git@github.com:timothygrant80/cisTEM.git
 From the cisTEM source code directory, run the following command:
 
 ```bash
-ln -s .vscode_shared/CistemDev .vscode
-ln -s .vscode/devcontainer_wxStable_static.json .devcontainer.json
+# This establishes soft links to files need for vscode to build the devcontainer from existing images.
+# This part of the tutorial will not cover building the underlying containers.
+./regenerate_containers.sh 
+
+# Now you are ready to compile. Open vscode.
 code .
 ```
 
@@ -97,22 +103,29 @@ Assuming you properly created the links when setting up the source code director
 
 The easiest is to type **ctrl+shift+p** and type **Reopen in Container**. This will build the container and open the source code directory in the container.
 
-Depending on your internet connection, this may take a little while as the docker images (~12 Gb) are downloaded and built.
+Depending on your internet connection, this may take a little while as the docker images (~7.5 Gb compressed) are downloaded and built.
 
 
 ## **Using the development container**
 
 - Setup autotools
 
-```bash
-./regenerate_project.b
-```
+    ```bash
+    # cisTEM uses gnu auto tools as a build chain. You must run the following script on any new clone of the repo, addition of any new .m4 scripts, or any modification to configure.ac. Have a look at the source if you are curious.
+    ./regenerate_project.b
+    ./regenerate_project.b
+    ```
 
 - Configure the type of build you want for cisTEM.
-    - **ctrl+shift+p** and type **Tasks: Run Task**
-    - Select **Configure cisTEM build**
+  - **ctrl+shift+p** and type **Tasks: Run Task**
+  - Select **Configure cisTEM build**
+    - This will build with common and usefule options. To see other configure options available, run ./configure --help.
+    - Newer versions will prompt you to enter additional configure options (or enter if none).
+    - Older versions will require you to modifiy your task.json to add configure options.
 
 - Build cisTEM
-    - **ctrl+shift+p** and type **Tasks: Run Task**
-    - Select **Build cisTEM**
+  - **ctrl+shift+p** and type **Tasks: Run Task**
+  - Select **Build cisTEM**
+    - Defaults to 8 threads. 
+        - More is better.
 
