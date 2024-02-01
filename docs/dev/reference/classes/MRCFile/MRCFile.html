@@ -7,7 +7,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>MRCFile &#8212; dev and user guides</title>
   
   
@@ -45,10 +46,13 @@
     <script src="../../../../../_static/underscore.js"></script>
     <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/togglebutton.js"></script>
     <script src="../../../../../_static/clipboard.min.js"></script>
     <script src="../../../../../_static/copybutton.js"></script>
     <script src="../../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -206,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../howto/howto.html"><span style="color: darkgreen"><strong>How-to guides</strong></span></a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../howto/Collaboration/intro.html">collaborate with us</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../howto/Collaboration/vscode_dev_container.html">development container in VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../howto/Collaboration/vscode_dev_container.html">Development container in vs code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../howto/Collaboration/git_workflow.html">Git workflow</a></li>
 </ul>
 </li>
@@ -505,10 +509,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="mrcfile">
+  <section class="tex2jax_ignore mathjax_ignore" id="mrcfile">
 <h1>MRCFile<a class="headerlink" href="#mrcfile" title="Permalink to this heading">#</a></h1>
 <p>Inherits from: AbstractImageFile</p>
-<div class="section" id="constructor">
+<section id="constructor">
 <h2>Constructor<a class="headerlink" href="#constructor" title="Permalink to this heading">#</a></h2>
 <p>Has copy constructor: true</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MRCFile</span><span class="p">();</span>
@@ -516,10 +520,10 @@ document.write(`
 <span class="n">MRCFile</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">overwrite</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">wait_for_file_to_exist</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="properties">
+</section>
+<section id="properties">
 <h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">#</a></h2>
-<div class="section" id="public">
+<section id="public">
 <h3>public<a class="headerlink" href="#public" title="Permalink to this heading">#</a></h3>
 <p>std::fstream *my_file;
 MRCHeader my_header;
@@ -531,16 +535,16 @@ int max_number_of_seconds_to_wait_for_file_to_exist;</p>
 <p class="admonition-title">Note</p>
 <p>Arguably all of these properties should probably be private.</p>
 </div>
-</div>
-<div class="section" id="private">
+</section>
+<section id="private">
 <h3>private<a class="headerlink" href="#private" title="Permalink to this heading">#</a></h3>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">TODO</p>
 <p>search code to see if these are infact treated as private, and if so modify them there.</p>
-</div>
-</div>
-</div>
-<div class="section" id="methods">
+</aside>
+</section>
+</section>
+<section id="methods">
 <h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">#</a></h2>
 <p>inline int ReturnXSize() {MyDebugAssertTrue(my_file-&gt;is_open(), “File not open!”);	return my_header.ReturnDimensionX();};
 inline int ReturnYSize() {MyDebugAssertTrue(my_file-&gt;is_open(), “File not open!”);	return my_header.ReturnDimensionY();};
@@ -559,8 +563,8 @@ void WriteSlicesToDisk(int start_slice, int end_slice, float *input_array);</p>
 <p>float ReturnPixelSize();
 void SetPixelSize(float wanted_pixel_size);
 inline void SetDensityStatistics( float wanted_min, float wanted_max, float wanted_mean, float wanted_rms ){my_header.SetDensityStatistics(wanted_min, wanted_max, wanted_mean, wanted_rms);}</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

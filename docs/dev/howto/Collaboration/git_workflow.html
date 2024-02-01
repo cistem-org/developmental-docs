@@ -7,7 +7,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Git workflow &#8212; dev and user guides</title>
   
   
@@ -45,10 +46,13 @@
     <script src="../../../../_static/underscore.js"></script>
     <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
     <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -506,21 +510,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="git-workflow">
+  <section class="tex2jax_ignore mathjax_ignore" id="git-workflow">
 <h1>Git workflow<a class="headerlink" href="#git-workflow" title="Permalink to this heading">#</a></h1>
 <p>After you have decided which repository to fork from (link to Getting started/Project organization) you will want to create your own local repository.</p>
-<div class="section" id="git-basics">
+<section id="git-basics">
 <h2>Git basics<a class="headerlink" href="#git-basics" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Local repository is entirely independent of the remote. All developers should work from their own forks, which allow them to track remote branches providing data security as well as the ability to work between multiple local repositories.</p></li>
 </ul>
-<div class="section" id="instructions-on-forking-fixpix">
+<section id="instructions-on-forking-fixpix">
 <h3>Instructions on forking (fixpix)<a class="headerlink" href="#instructions-on-forking-fixpix" title="Permalink to this heading">#</a></h3>
 <p>To create a fork, navigate to the repository you will most directly be working with. For the Grigorieff lab, this is <a class="reference external" href="https://github.com/bHimes/cisTEM_downstream_bah">Ben’s fork</a></p>
 <p>Just click on the fork button on the top right</p>
 <p><img alt="git fork" src="icons/gitfork2.png" /></p>
-</div>
-<div class="section" id="cloning-your-new-remote-fork-to-work-locally">
+</section>
+<section id="cloning-your-new-remote-fork-to-work-locally">
 <h3>Cloning your new remote fork to work locally<a class="headerlink" href="#cloning-your-new-remote-fork-to-work-locally" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/YOUR-USERNAME/Your-repo
 </pre></div>
@@ -529,8 +533,8 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Your-repo in the current example is cisTEM_downstream_bah.The full URL can be copied from the green “code” box on your github page.</p>
 </div>
-</div>
-<div class="section" id="getting-to-work">
+</section>
+<section id="getting-to-work">
 <h3>Getting to work!<a class="headerlink" href="#getting-to-work" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>You will not work on the master or development branches directly. For each feature, you will create a feature branch off of the development branch, and do some work there.</p></li>
@@ -545,8 +549,8 @@ $<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </spa
 <p><strong>Saving, and reverting changes in your local repo</strong>
 If you are not familiar with CLI git, please read through the sections “Saving changes, Inspecting a repository and Undoing changes” in this very nice <a class="reference external" href="https://www.atlassian.com/git/tutorials/undoing-changes">tutorial by Atlassian.</a></p>
 </div>
-</div>
-<div class="section" id="sharing-your-work">
+</section>
+<section id="sharing-your-work">
 <h3>Sharing your work<a class="headerlink" href="#sharing-your-work" title="Permalink to this heading">#</a></h3>
 <p>After you ensure the changes in your feature branch:</p>
 <ul class="simple">
@@ -557,13 +561,13 @@ If you are not familiar with CLI git, please read through the sections “Saving
 <p>The next step is to clean up your local commit history:</p>
 <p>**TODO add rebase info</p>
 <p>**TODO add pull request info.</p>
-</div>
-<div class="section" id="the-repository-workflow-overall-handled-by-maintainers">
+</section>
+<section id="the-repository-workflow-overall-handled-by-maintainers">
 <h3>The repository workflow overall (handled by maintainers.)<a class="headerlink" href="#the-repository-workflow-overall-handled-by-maintainers" title="Permalink to this heading">#</a></h3>
 <p><img alt="git flow" src="icons/gitflow2.svg" /></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

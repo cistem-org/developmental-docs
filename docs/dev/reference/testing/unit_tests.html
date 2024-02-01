@@ -7,7 +7,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Unit Tests &#8212; dev and user guides</title>
   
   
@@ -45,10 +46,13 @@
     <script src="../../../../_static/underscore.js"></script>
     <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
     <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -206,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../howto/howto.html"><span style="color: darkgreen"><strong>How-to guides</strong></span></a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../howto/Collaboration/intro.html">collaborate with us</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../howto/Collaboration/vscode_dev_container.html">development container in VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../howto/Collaboration/vscode_dev_container.html">Development container in vs code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../howto/Collaboration/git_workflow.html">Git workflow</a></li>
 </ul>
 </li>
@@ -590,12 +594,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="unit-tests">
+  <section class="tex2jax_ignore mathjax_ignore" id="unit-tests">
 <h1><em>Unit Tests</em><a class="headerlink" href="#unit-tests" title="Permalink to this heading">#</a></h1>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="testmrcfunctions">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="testmrcfunctions">
 <h1>TestMRCFunctions<a class="headerlink" href="#testmrcfunctions" title="Permalink to this heading">#</a></h1>
-<div class="section" id="functionality-tested">
+<section id="functionality-tested">
 <h2>Functionality Tested:<a class="headerlink" href="#functionality-tested" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Open a file with .mrc extension</p></li>
@@ -610,20 +614,20 @@ document.write(`
 <li><p>Aside from the raw data stream, this also adds/removes padding for in place FFTs which is not currently tested</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="depends-on">
+</section>
+<section id="depends-on">
 <h2>Depends on:<a class="headerlink" href="#depends-on" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>MRCFile::OpenFile</p></li>
 <li><p>MRCFile::ReadSlice</p></li>
 <li><p>Artifact: hiv_images_80x80x10</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testassignmentoperatorsandfunctions">
+<section class="tex2jax_ignore mathjax_ignore" id="testassignmentoperatorsandfunctions">
 <h1>TestAssignmentOperatorsAndFunctions<a class="headerlink" href="#testassignmentoperatorsandfunctions" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id1">
+<section id="id1">
 <h2>Functionality Tested:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Copy an Image object and it’s data into this Image, when the memory for this Image is not allocated.</p></li>
@@ -646,8 +650,8 @@ document.write(`
 <ul class="simple">
 <li><p>Unlike the previous tests, the Image::Consume method directly steals the memory pointed to by the other image.</p></li>
 </ul>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>Depends on:<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::Allocate</p></li>
@@ -662,12 +666,12 @@ document.write(`
 <li><p>No asserts in place to confirm proper memory alignment either.</p></li>
 </ul>
 </div>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testfftfunctions">
+<section class="tex2jax_ignore mathjax_ignore" id="testfftfunctions">
 <h1>TestFFTFunctions<a class="headerlink" href="#testfftfunctions" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id3">
+<section id="id3">
 <h2>Functionality Tested:<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -685,8 +689,8 @@ document.write(`
 <li><p>Image::BackwardFFT</p></li>
 <li><p>RemoveFFTWPadding</p></li>
 </ul>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>Depends on:<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>MRCFile::OpenFile</p></li>
@@ -695,11 +699,11 @@ document.write(`
 <li><p>Artifact: sine_wave_128x128x1</p></li>
 </ul>
 <hr class="docutils" />
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="testscalingandsizingfunctions">
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="testscalingandsizingfunctions">
 <span id="scaling-and-sizing-label"></span><h1>TestScalingAndSizingFunctions<a class="headerlink" href="#testscalingandsizingfunctions" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id5">
+<section id="id5">
 <h2>Functionality Tested:<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::ClipInto</p>
@@ -721,8 +725,8 @@ document.write(`
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="id6">
+</section>
+<section id="id6">
 <h2>Depends on:<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>MRCFile::OpenFile</p></li>
@@ -734,18 +738,18 @@ document.write(`
 </ul>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testfilterfunctions">
+<section class="tex2jax_ignore mathjax_ignore" id="testfilterfunctions">
 <h1>TestFilterFunctions<a class="headerlink" href="#testfilterfunctions" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id7">
+<section id="id7">
 <h2>Functionality Tested:<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::ApplyBFactor</p></li>
 </ul>
-</div>
-<div class="section" id="id8">
+</section>
+<section id="id8">
 <h2>Depends on:<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>MRCFile::OpenFile</p></li>
@@ -753,12 +757,12 @@ document.write(`
 <li><p>Image::ForwardFFT</p></li>
 <li><p>Image::BackwardFFT</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testalignmentfunctions">
+<section class="tex2jax_ignore mathjax_ignore" id="testalignmentfunctions">
 <h1>TestAlignmentFunctions<a class="headerlink" href="#testalignmentfunctions" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id9">
+<section id="id9">
 <h2>Functionality Tested:<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::PhaseShift</p></li>
@@ -766,8 +770,8 @@ document.write(`
 <li><p>Image::FindPeakWithIntegerCoordinates</p></li>
 <li><p>Image::FindPeakWithParabolaFit</p></li>
 </ul>
-</div>
-<div class="section" id="id10">
+</section>
+<section id="id10">
 <h2>Depends on:<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>MRCFile::OpenFile</p></li>
@@ -775,32 +779,32 @@ document.write(`
 <li><p>Image::ForwardFFT</p></li>
 <li><p>Image::BackwardFFT</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testimagearithmeticfunctions">
+<section class="tex2jax_ignore mathjax_ignore" id="testimagearithmeticfunctions">
 <h1>TestImageArithmeticFunctions<a class="headerlink" href="#testimagearithmeticfunctions" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id11">
+<section id="id11">
 <h2>Functionality Tested:<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::AddImage</p></li>
 <li><p>Image::SetToConstant</p></li>
 </ul>
-</div>
-<div class="section" id="id12">
+</section>
+<section id="id12">
 <h2>Depends on:<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testspectrumboxconvolution">
+<section class="tex2jax_ignore mathjax_ignore" id="testspectrumboxconvolution">
 <h1>TestSpectrumBoxConvolution<a class="headerlink" href="#testspectrumboxconvolution" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id13">
+<section id="id13">
 <h2>Functionality Tested:<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::SpectrumBoxConvolution</p></li>
 </ul>
-</div>
-<div class="section" id="id14">
+</section>
+<section id="id14">
 <h2>Depends on:<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>MRCFile::OpenFile</p></li>
@@ -809,46 +813,46 @@ document.write(`
 <li><p>Image::BackwardFFT</p></li>
 <li><p>Artifact: hiv_image_80x80x1_filename</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testimageloopingandaddressing">
+<section class="tex2jax_ignore mathjax_ignore" id="testimageloopingandaddressing">
 <h1>TestImageLoopingAndAddressing<a class="headerlink" href="#testimageloopingandaddressing" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id15">
+<section id="id15">
 <h2>Functionality Tested:<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::LoopingAndAddressing</p></li>
 </ul>
-</div>
-<div class="section" id="id16">
+</section>
+<section id="id16">
 <h2>Depends on:<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>None</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testnumerictextfiles">
+<section class="tex2jax_ignore mathjax_ignore" id="testnumerictextfiles">
 <h1>TestNumericTextFiles<a class="headerlink" href="#testnumerictextfiles" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id17">
+<section id="id17">
 <h2>Functionality Tested:<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>NumericTextFile::Init</p></li>
 <li><p>NumericTextFile::ReadLine</p></li>
 <li><p>NumericTextFile::WriteLine</p></li>
 </ul>
-</div>
-<div class="section" id="id18">
+</section>
+<section id="id18">
 <h2>Depends on:<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>none</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testclipintofourier">
+<section class="tex2jax_ignore mathjax_ignore" id="testclipintofourier">
 <h1>TestClipIntoFourier<a class="headerlink" href="#testclipintofourier" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id19">
+<section id="id19">
 <h2>Functionality Tested:<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>test Fourier space clipping into a larger image.</p>
@@ -863,8 +867,8 @@ document.write(`
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="id20">
+</section>
+<section id="id20">
 <h2>Depends on:<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>MRCFile::OpenFile</p></li>
@@ -882,28 +886,28 @@ document.write(`
 <li><p>Image::ComputeAmplitudeSpectrum</p></li>
 </ul>
 </div>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testmaskcentralcross">
+<section class="tex2jax_ignore mathjax_ignore" id="testmaskcentralcross">
 <h1>TestMaskCentralCross<a class="headerlink" href="#testmaskcentralcross" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id21">
+<section id="id21">
 <h2>Functionality Tested:<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::MaskCentralCross</p></li>
 </ul>
-</div>
-<div class="section" id="id22">
+</section>
+<section id="id22">
 <h2>Depends on:<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::SetToConstant</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="teststartobinaryfileconversion">
+<section class="tex2jax_ignore mathjax_ignore" id="teststartobinaryfileconversion">
 <h1>TestStarToBinaryFileConversion<a class="headerlink" href="#teststartobinaryfileconversion" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id23">
+<section id="id23">
 <h2>Functionality Tested:<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>cisTEMParameters::cisTEMParameters</p></li>
@@ -915,8 +919,8 @@ document.write(`
 <li><p>cisTEMParameters::ReadFromcisTEMBinaryFile</p></li>
 <li><p>cisTEMParameters::ReturnFileSizeInBytes</p></li>
 </ul>
-</div>
-<div class="section" id="id24">
+</section>
+<section id="id24">
 <h2>Depends on:<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h2>
 <ul>
 <li><p>wxFileName::GetTempDir();</p></li>
@@ -926,18 +930,18 @@ document.write(`
 </div>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testelectronexposurefilter">
+<section class="tex2jax_ignore mathjax_ignore" id="testelectronexposurefilter">
 <h1>TestElectronExposureFilter<a class="headerlink" href="#testelectronexposurefilter" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id25">
+<section id="id25">
 <h2>Functionality Tested:<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>ElectronDose::CalculateDoseFilterAs1DArray</p></li>
 </ul>
-</div>
-<div class="section" id="id26">
+</section>
+<section id="id26">
 <h2>Depends on:<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -945,12 +949,12 @@ document.write(`
 <li><p>ZeroFloatArray is not currently tested.</p></li>
 </ul>
 </div>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testempiricaldistribution">
+<section class="tex2jax_ignore mathjax_ignore" id="testempiricaldistribution">
 <h1>TestEmpiricalDistribution<a class="headerlink" href="#testempiricaldistribution" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id27">
+<section id="id27">
 <h2>Functionality Tested:<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::ReturnDistributionOfRealValues</p></li>
@@ -960,20 +964,20 @@ document.write(`
 <li><p>EmpiricalDistribution::GetMaximum</p></li>
 <li><p>EmpiricalDistribution::GetSampleSumOfSquares</p></li>
 </ul>
-</div>
-<div class="section" id="id28">
+</section>
+<section id="id28">
 <h2>Depends on:<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>MRCFile::OpenFile</p></li>
 <li><p>MRCFile::ReadSlice</p></li>
 <li><p>Artifact: hiv_image_80x80x1</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testsumofsquaresfourierandfftnormalization">
+<section class="tex2jax_ignore mathjax_ignore" id="testsumofsquaresfourierandfftnormalization">
 <h1>TestSumOfSquaresFourierAndFFTNormalization<a class="headerlink" href="#testsumofsquaresfourierandfftnormalization" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id29">
+<section id="id29">
 <h2>Functionality Tested:<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::ReturnSumOfSquares</p>
@@ -983,8 +987,8 @@ document.write(`
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="id30">
+</section>
+<section id="id30">
 <h2>Depends on:<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>MRCFile::OpenFile</p></li>
@@ -993,12 +997,12 @@ document.write(`
 <li><p>Image::BackwardFFT</p></li>
 <li><p>Artifact: hiv_image_80x80x1</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testrandomvariablefunctions">
+<section class="tex2jax_ignore mathjax_ignore" id="testrandomvariablefunctions">
 <h1>TestRandomVariableFunctions<a class="headerlink" href="#testrandomvariablefunctions" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id31">
+<section id="id31">
 <h2>Functionality Tested:<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::AddNoise called via the following methods:</p>
@@ -1011,8 +1015,8 @@ document.write(`
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="id32">
+</section>
+<section id="id32">
 <h2>Depends on:<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::ReturnDistributionOfRealValues</p></li>
@@ -1022,12 +1026,12 @@ document.write(`
 <li><p>EmpiricalDistribution::GetMaximum</p></li>
 <li><p>EmpiricalDistribution::GetSampleSumOfSquares</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="testintegershifts">
+<section class="tex2jax_ignore mathjax_ignore" id="testintegershifts">
 <h1>TestIntegerShifts<a class="headerlink" href="#testintegershifts" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id33">
+<section id="id33">
 <h2>Functionality Tested:<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::RotateInPlaceAboutZBy90Degrees(rotate_by_positive_90_degrees)</p>
@@ -1040,15 +1044,15 @@ document.write(`
 </li>
 <li><p>Image::RealSpaceIntegerShift(-1,0,0);</p></li>
 </ul>
-</div>
-<div class="section" id="id34">
+</section>
+<section id="id34">
 <h2>Depends on:<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Image::CopyFrom (TestAssignmentOperatorsAndFunctions)</p></li>
 </ul>
 <hr class="docutils" />
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

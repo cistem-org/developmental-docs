@@ -7,7 +7,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Download an Install &#8212; dev and user guides</title>
   
   
@@ -45,10 +46,13 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -205,7 +209,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../dev/howto/howto.html"><span style="color: darkgreen"><strong>How-to guides</strong></span></a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../dev/howto/Collaboration/intro.html">collaborate with us</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../dev/howto/Collaboration/vscode_dev_container.html">development container in VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dev/howto/Collaboration/vscode_dev_container.html">Development container in vs code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../dev/howto/Collaboration/git_workflow.html">Git workflow</a></li>
 </ul>
 </li>
@@ -499,15 +503,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="download-an-install">
+  <section class="tex2jax_ignore mathjax_ignore" id="download-an-install">
 <h1><em>Download an Install</em><a class="headerlink" href="#download-an-install" title="Permalink to this heading">#</a></h1>
 <hr class="docutils" />
-<div class="section" id="a-zipped-binary-can-be-found-here">
+<section id="a-zipped-binary-can-be-found-here">
 <h2>A zipped binary can be found here<a class="headerlink" href="#a-zipped-binary-can-be-found-here" title="Permalink to this heading">#</a></h2>
 <p>The simulator is not included in the current major release of <em>cis</em>TEM, so you’ll need to either compile from source, following instructions here, or for many linux users,
 <a class="reference external" href="https://drive.google.com/file/d/1BDQmN3quI-bnOYe23l9p_mb7jWFEGS1f/view?usp=sharing">this binary</a>  compiled on centos7 should work for you.</p>
-</div>
-<div class="section" id="unpack-the-binary-in-your-home-dir">
+</section>
+<section id="unpack-the-binary-in-your-home-dir">
 <h2>Unpack the binary in your home dir<a class="headerlink" href="#unpack-the-binary-in-your-home-dir" title="Permalink to this heading">#</a></h2>
 <p>To make <em>cis</em>TEM programs available at ${HOME}/cisTEM_alpha/src/program_name simply run</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>unzip<span class="w"> </span>-d<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/cisTEM_alpha<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/Downloads/cisTEM_1_0aabb63_20210505.zip
@@ -517,8 +521,8 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>The naming convention is a sequential index, the first seven characters in the corresponding git commit hash, and then the date the binary was compiled.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

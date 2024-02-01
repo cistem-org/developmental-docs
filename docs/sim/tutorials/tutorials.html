@@ -7,7 +7,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Tutorials &#8212; dev and user guides</title>
   
   
@@ -45,10 +46,13 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -513,13 +517,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-darkred-tutorials-span">
+  <section class="tex2jax_ignore mathjax_ignore" id="span-style-color-darkred-tutorials-span">
 <h1><span style="color: darkred"><em><strong>Tutorials</strong></em></span><a class="headerlink" href="#span-style-color-darkred-tutorials-span" title="Permalink to this heading">#</a></h1>
-<div class="section" id="get-an-alpha-version-of-cistem">
+<section id="get-an-alpha-version-of-cistem">
 <span id="seeabove1"></span><h2>1 - Get an alpha version of <em>cis</em>TEM<a class="headerlink" href="#get-an-alpha-version-of-cistem" title="Permalink to this heading">#</a></h2>
 <p>To run the simulator or template matching you will need an alpha version of <em>cis</em>TEM. For most people, the best choice will be to download a pre-compiled binary, following the instuctions here: <a class="reference internal" href="get_cistem.html"><span class="doc std std-doc"><strong>get cistem tutorial</strong></span></a> For those interested in compiling form source code, you will need to add the “–enable-experimental” flag to your configure line, as well as following the instructions <a class="reference external" href="https://github.com/bHimes/cisTEM_downstream_bah/wiki/Compiling-cisTEM">here.</a></p>
-</div>
-<div class="section" id="calculate-a-3d-scattering-potential">
+</section>
+<section id="calculate-a-3d-scattering-potential">
 <span id="calc-3d-scattering"></span><h2>2 - Calculate a 3D scattering potential<a class="headerlink" href="#calculate-a-3d-scattering-potential" title="Permalink to this heading">#</a></h2>
 <p>Simulation in TEM involves describing</p>
 <ol class="arabic simple">
@@ -529,7 +533,7 @@ document.write(`
 <li><p>The influence of the microscope optics, including the lenses, detectors etc.</p></li>
 </ol>
 <p>Step one is also the first step in a template matching experiment, were the detection efficiency is directly tied to the output SNR from the matched filter used in 2DTM. The SNR in turn depends strongly on how well your calculated specimen potential matches the imaged specimen potential recorded in your micrographs(s). To improve detection, both points 1 &amp; 4 from above need to be carefully handled.</p>
-<div class="section" id="materials-needed">
+<section id="materials-needed">
 <h3>Materials needed<a class="headerlink" href="#materials-needed" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>An alpha version of <em>cis</em>TEM <a class="reference internal" href="#seeabove1"><span class="std std-ref">see above.</span></a></p></li>
@@ -545,20 +549,20 @@ document.write(`
 <p class="admonition-title">Tip</p>
 <p>Some pdb files only include coordinates for the asymmetric unit, like 2w0o.pdb apoferritin. When you click to download, select the “Biological Assembly” to get a PDB with all the atoms specified.</p>
 </div>
-</div>
-</div>
-<div class="section" id="calculate-a-stack-of-noisy-particles">
+</section>
+</section>
+<section id="calculate-a-stack-of-noisy-particles">
 <h2>3 - Calculate a stack of noisy particles<a class="headerlink" href="#calculate-a-stack-of-noisy-particles" title="Permalink to this heading">#</a></h2>
-<div class="section" id="id1">
+<section id="id1">
 <h3>Materials needed<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>a test string</p>
 <ul class="simple">
 <li><p>An alpha version of <em>cis</em>TEM <a class="reference internal" href="#seeabove1"><span class="std std-ref">see above.</span></a></p></li>
 </ul>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Tip: Hover over the right side of the code box and click the clipboard icon to copy the link.</p>
-</div>
+</aside>
 <ul class="simple">
 <li><p>The beta galactosidase PDB and a run script</p></li>
 </ul>
@@ -568,12 +572,12 @@ document.write(`
 <ul class="simple">
 <li></li>
 </ul>
-</div>
-<div class="section" id="overview">
+</section>
+<section id="overview">
 <h3>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h3>
 <p>In this tutorial, you will use the script you downloaded to understand the fundamentals of what is produced in the image simulation, and the primary sources of shot noise and structural noise.</p>
-</div>
-<div class="section" id="a-simulate-an-isolated-protein">
+</section>
+<section id="a-simulate-an-isolated-protein">
 <h3>A) Simulate an isolated protein<a class="headerlink" href="#a-simulate-an-isolated-protein" title="Permalink to this heading">#</a></h3>
 <p><strong>You will first run your bgal_flat.sh script as is. In subsequent steps we will modify parameters and command line options to change the results.</strong></p>
 <div class="admonition tip">
@@ -594,10 +598,12 @@ document.write(`
 <span class="nv">n_threads</span><span class="o">=</span><span class="m">16</span><span class="w"> </span><span class="c1"># Not so important for a a 3d, it will be fast either way.</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id2">
+<figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_1.svg"><img alt="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_1.svg" src="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_1.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text"><strong>A) simulation <em><strong>in vacuuo</strong></em> B) adding pseudo-water molecules C) low-dose with  <span class="math notranslate nohighlight">\(1.0~ e^{-}/\mathring{A}^2\)</span> D) low-dose with  <span class="math notranslate nohighlight">\(30.0~ e^{-}/\mathring{A}^2\)</span> E) same as (D) farther from focus (<span class="math notranslate nohighlight">\(2.4\mu{m}\)</span>)</strong></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text"><strong>A) simulation <em><strong>in vacuuo</strong></em> B) adding pseudo-water molecules C) low-dose with  <span class="math notranslate nohighlight">\(1.0~ e^{-}/\mathring{A}^2\)</span> D) low-dose with  <span class="math notranslate nohighlight">\(30.0~ e^{-}/\mathring{A}^2\)</span> E) same as (D) farther from focus (<span class="math notranslate nohighlight">\(2.4\mu{m}\)</span>)</strong></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Of course, proteins do not exist in a vacuum, they are embedded in solvent. We can include the solvent, by resetting the scaling factor to its default value of 1.0. Doing this, you should get an image that looks like Figure 1B.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output_filename</span><span class="o">=</span><span class="s2">&quot;betgal_water.mrc&quot;</span>
 .
@@ -630,9 +636,9 @@ document.write(`
 </pre></div>
 </div>
 <p><strong>You should have now reproduced Figure 1, learning about shot noise and structural noise along the way. It is important to point out that the improved visibility of the protein by imaging farther from focus does not mean the image has more information, in fact it has less.</strong></p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="b-simulate-a-more-realistic-protein">
+<section id="b-simulate-a-more-realistic-protein">
 <h3>B) Simulate a more realistic protein<a class="headerlink" href="#b-simulate-a-more-realistic-protein" title="Permalink to this heading">#</a></h3>
 <p>So far, we have been simulating a single lonely protein devoid of neighbors, in a minimally thick layer of solvent. The first thing we will do, is stop supressing the random angles and simulate a small particle stack so you can see what a more realistic output will look like. For visualization purposes, we will again downweight the water, this time by a factor of 0.5, and turn back on the <em><strong>–save-detector-wavefunction</strong></em> option. After changing these parameters, you should be able to reproduce Figure 2.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output_filename</span><span class="o">=</span><span class="s2">&quot;betgal.mrc&quot;</span>
@@ -642,37 +648,43 @@ document.write(`
 <span class="nv">optional_args</span><span class="o">=</span><span class="s2">&quot; --save-detector-wavefunction&quot;</span>
 </pre></div>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><em><strong>NOTE</strong></em> your particles will be in a different orientation than mine. You also may need to adjust the global image contrast in your image display software, as each particle in this case may have a different solvent thickness.</p>
-</div>
-<div class="figure align-center" id="id3">
+</aside>
+<figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_2.svg"><img alt="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_2.svg" src="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_2.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text"><strong>Random particles in solvent</strong></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text"><strong>Random particles in solvent</strong></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The default behavior is to specify a layer of solvent just big enough to hold your protein, so an oblong protein like betagal (<strong><span class="math notranslate nohighlight">\(~190\mathring{A}\)</span></strong> in the longest dimension) will produce variable contrast. You can set the minimum thickness of your ice layer, assuming it is at least as big as the default. Here we’ll set the thickness to 200nm to illustrate how more solvent reduces contrast.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output_filename</span><span class="o">=</span><span class="s2">&quot;betgal_thick.mrc&quot;</span>
 <span class="nv">minimum_thickness</span><span class="o">=</span><span class="m">2000</span><span class="w"> </span><span class="c1"># Angstrom</span>
 </pre></div>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Remember that the solvent is artificially multiplied by 0.5 in this tutorial example. Do you think you’ll be able to see a ~450kDa protein in 200nm ice?</p>
-</div>
-<div class="figure align-center" id="id4">
+</aside>
+<figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_3.svg"><img alt="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_3.svg" src="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_3.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text"><strong>Random particles in thick layer of solvent</strong></span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text"><strong>Random particles in thick layer of solvent</strong></span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In the previous example we added more solvent molecules. Obviously, other protein molecules are another source of structural noise. You can add up to six random neighboring particles by including the <em><strong>–max_number_of_noise_particles=6</strong></em> command line flag. We’ll also reduce the thickness of our solvent layer to 25nm.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output_filename</span><span class="o">=</span><span class="s2">&quot;betgal_neighbors.mrc&quot;</span>
 <span class="nv">minimum_thickness</span><span class="o">=</span><span class="m">250</span><span class="w"> </span><span class="c1"># Angstrom</span>
 <span class="nv">optional_args</span><span class="o">=</span><span class="s2">&quot; --save-detector-wavefunction --max_number_of_noise_particles=6 &quot;</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id5">
+<figure class="align-center" id="id5">
 <a class="reference internal image-reference" href="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_4.svg"><img alt="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_4.svg" src="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_4.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text"><strong>Particle stack with neighbors</strong></span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text"><strong>Particle stack with neighbors</strong></span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Finally, we’ll put it all together, setting a higher defocus, moderate ice thickness, noise particles, full water intensity, and a movie with 45 electrons total exposure.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">output_filename</span><span class="o">=</span><span class="s2">&quot;betgal_realistic.mrc&quot;</span>
 <span class="nv">minimum_thickness</span><span class="o">=</span><span class="m">250</span><span class="w"> </span><span class="c1"># Angstrom</span>
@@ -682,18 +694,20 @@ document.write(`
 <span class="nv">optional_args</span><span class="o">=</span><span class="s2">&quot; --max_number_of_noise_particles=6 &quot;</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id6">
+<figure class="align-center" id="id6">
 <a class="reference internal image-reference" href="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_5.svg"><img alt="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_5.svg" src="icons/SIM_tutorials/tutorial_2/Sim_tutorial2_5.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text"><strong>Realistic particle stack</strong></span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text"><strong>Realistic particle stack</strong></span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 <hr class="docutils" />
-<div class="section" id="summary">
+<section id="summary">
 <h3>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h3>
 <p>TODO: List of key concepts and links to How-tos (e.g. modify the distribution of random noise particles) and discussions (e.g. limits on expsoure/frame, exposure rate etc.)</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

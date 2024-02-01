@@ -7,7 +7,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Tutorials &#8212; dev and user guides</title>
   
   
@@ -45,10 +46,13 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -524,17 +528,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-e87502-tutorials-span">
+  <section class="tex2jax_ignore mathjax_ignore" id="span-style-color-e87502-tutorials-span">
 <h1><span style="color: #e87502"><em><strong>Tutorials</strong></em></span><a class="headerlink" href="#span-style-color-e87502-tutorials-span" title="Permalink to this heading">#</a></h1>
 <p>Template matching intro TODO:</p>
-<div class="section" id="dtm-using-the-gui">
+<section id="dtm-using-the-gui">
 <h2>1 - 2DTM using the GUI<a class="headerlink" href="#dtm-using-the-gui" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
 <p><strong>Prerequisite</strong> - 2DTM requires an alpha version of <em>cis</em>TEM. If you have not done so, please start by <a class="reference internal" href="../../sim/tutorials/get_cistem.html"><span class="doc std std-doc">installing one</span></a>, and return here when finished.</p>
-<div class="section" id="project-setup">
+<section id="project-setup">
 <h3>Project Setup<a class="headerlink" href="#project-setup" title="Permalink to this heading">#</a></h3>
 <hr class="docutils" />
-<div class="section" id="download-the-em-data">
+<section id="download-the-em-data">
 <h4>Download the EM data<a class="headerlink" href="#download-the-em-data" title="Permalink to this heading">#</a></h4>
 <p>We first need to obtain the data for the tutorial. If you have gone through the <em>cis</em>TEM single particle tutorial, then you already have it on hand. If not, we will be processing a single movie from that data set, which may be obtained from the CLI:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/cistem_tm_tutorial_1<span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/cistem_tm_tutorial_1/movies
@@ -545,8 +549,8 @@ wget<span class="w"> </span>-m<span class="w"> </span>ftp://ftp.ebi.ac.uk/empiar
 ln<span class="w"> </span>-s<span class="w"> </span>ftp.ebi.ac.uk/empiar/world_availability/10146/data/May08_03.05.02.bin.mrc<span class="w">  </span>movie.mrc
 </pre></div>
 </div>
-</div>
-<div class="section" id="download-the-pdb-model">
+</section>
+<section id="download-the-pdb-model">
 <h4>Download the PDB model<a class="headerlink" href="#download-the-pdb-model" title="Permalink to this heading">#</a></h4>
 <p>Because these movies are binned, they are not particularly well compressed, so while you wait for your download to finish, we’ll also grab the <a class="reference external" href="https://www.rcsb.org/structure/2w0o">PDB for horse spleen apoferritin</a> that we’ll use to generate our template.</p>
 <div class="admonition note">
@@ -557,12 +561,12 @@ ln<span class="w"> </span>-s<span class="w"> </span>ftp.ebi.ac.uk/empiar/world_a
 <p class="admonition-title">Tip</p>
 <p>Some pdb files only include coordinates for the asymmetric unit, like 2w0o.pdb apoferritin. When you click to download, select the “Biological Assembly” to get a PDB with all the atoms specified.</p>
 </div>
-</div>
-</div>
-<div class="section" id="pre-process-the-data">
+</section>
+</section>
+<section id="pre-process-the-data">
 <h3>Pre-process the data<a class="headerlink" href="#pre-process-the-data" title="Permalink to this heading">#</a></h3>
 <hr class="docutils" />
-<div class="section" id="create-project">
+<section id="create-project">
 <h4><strong>create project</strong><a class="headerlink" href="#create-project" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>open <em>cis</em>TEM</p></li>
@@ -574,14 +578,14 @@ ln<span class="w"> </span>-s<span class="w"> </span>ftp.ebi.ac.uk/empiar/world_a
 <li><p>create a new project in the cistem_tm_tutorial_1 folder</p></li>
 </ul>
 <p><img alt="create project" src="icons/TM_tutorials/tutorial_1/TM_tutorial_1_pic1.svg" /></p>
-</div>
-<div class="section" id="import-movie-asset">
+</section>
+<section id="import-movie-asset">
 <h4><strong>import movie asset</strong><a class="headerlink" href="#import-movie-asset" title="Permalink to this heading">#</a></h4>
 <p>Different types of data in <em>cis</em>TEM are referred to as assets. Import your movie assest, with data parameters:</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"><span style="color: purple"><em>Discussion</em>:</span></p>
 <p>These images were collected with a spherical aberration corrector [see discussion TODO].</p>
-</div>
+</aside>
 <ul class="simple">
 <li><p>Voltage: <span class="math notranslate nohighlight">\(300 ~keV\)</span></p></li>
 <li><p>Spherical Aberration: <span class="math notranslate nohighlight">\(0.001~ mm\)</span></p></li>
@@ -589,28 +593,28 @@ ln<span class="w"> </span>-s<span class="w"> </span>ftp.ebi.ac.uk/empiar/world_a
 <li><p>Exposure Per Frame: <span class="math notranslate nohighlight">\(2.0~ e^{-}/\mathring{A}^2\)</span></p></li>
 </ul>
 <p><img alt="create project" src="icons/TM_tutorials/tutorial_1/TM_tutorial_1_pic2.svg" /></p>
-</div>
-<div class="section" id="align-your-movie">
+</section>
+<section id="align-your-movie">
 <h4><strong>align your movie</strong><a class="headerlink" href="#align-your-movie" title="Permalink to this heading">#</a></h4>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>We tend to see the best detection with a total exposure between 30-50 <span class="math notranslate nohighlight">\(e^{-}/\mathring{A}^2\)</span>. When aligning your movies, you may select a range of frames to average together, we we choose 20 frames, corresponding to 40 <span class="math notranslate nohighlight">\(e^{-}/\mathring{A}^2\)</span>.</p>
 </div>
 <p><img alt="create project" src="icons/TM_tutorials/tutorial_1/TM_tutorial_1_pic3.svg" /></p>
-</div>
-<div class="section" id="measure-your-ctf">
+</section>
+<section id="measure-your-ctf">
 <h4><strong>measure your ctf</strong><a class="headerlink" href="#measure-your-ctf" title="Permalink to this heading">#</a></h4>
 <hr class="docutils" />
 <p>You can use the default settings for this step. Your results should be similar to below:</p>
 <p><img alt="create project" src="icons/TM_tutorials/tutorial_1/TM_tutorial_1_pic4.svg" /></p>
-</div>
-</div>
-<div class="section" id="generate-your-template">
+</section>
+</section>
+<section id="generate-your-template">
 <h3>Generate your template<a class="headerlink" href="#generate-your-template" title="Permalink to this heading">#</a></h3>
 <hr class="docutils" />
 <p>Instructions for this step can be found in <a class="reference internal" href="../../sim/tutorials/tutorials.html#calc-3d-scattering"><span class="std std-ref">simulation tutorial 2.</span></a></p>
-</div>
-<div class="section" id="import-your-template">
+</section>
+<section id="import-your-template">
 <h3>Import your template<a class="headerlink" href="#import-your-template" title="Permalink to this heading">#</a></h3>
 <hr class="docutils" />
 <ol class="arabic simple">
@@ -621,14 +625,14 @@ ln<span class="w"> </span>-s<span class="w"> </span>ftp.ebi.ac.uk/empiar/world_a
 <li><p>Enter 1.5 for the pixel size, which will enable the “Import” button</p></li>
 </ol>
 <p><img alt="create project" src="icons/TM_tutorials/tutorial_1/TM_tutorial_1_pic5.svg" /></p>
-</div>
-<div class="section" id="setup-run-profile">
+</section>
+<section id="setup-run-profile">
 <h3>Setup run profile<a class="headerlink" href="#setup-run-profile" title="Permalink to this heading">#</a></h3>
 <hr class="docutils" />
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"><span style="color: purple"><em>How-to</em>:</span></p>
 <p>We let cisTEM pick the GPU with the most available memory. For better control on systems with multiple gpus, see this how-to page TODO:</p>
-</div>
+</aside>
 <ol class="arabic simple">
 <li><p>Use the left toolbar to open the settings panel</p></li>
 <li><p>Duplicate your default run profile, then click rename and type in gpu_1</p></li>
@@ -641,8 +645,8 @@ ln<span class="w"> </span>-s<span class="w"> </span>ftp.ebi.ac.uk/empiar/world_a
 <p class="admonition-title">Tip</p>
 <p>On some screens, this edit run profile dialog doesn’t automaticallyexpand the whole way to expose the “ok” and “cancel” buttons. As a workaround, expand to full screen with the square icon.</p>
 </div>
-</div>
-<div class="section" id="search">
+</section>
+<section id="search">
 <h3>Search<a class="headerlink" href="#search" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Use the left toolbar to open the experimental panel</p></li>
@@ -656,8 +660,8 @@ ln<span class="w"> </span>-s<span class="w"> </span>ftp.ebi.ac.uk/empiar/world_a
 <p class="admonition-title">Note</p>
 <p>With the symmetry, no defocus search, and small image size, this search should only take 2-3 minutes depending on your GPU.</p>
 </div>
-</div>
-<div class="section" id="analyze-results">
+</section>
+<section id="analyze-results">
 <h3>Analyze results<a class="headerlink" href="#analyze-results" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Select the MT Results icon</p></li>
@@ -670,30 +674,30 @@ b) scaled mip
 c) plotted result</p></li>
 </ol>
 <p><img alt="create project" src="icons/TM_tutorials/tutorial_1/TM_tutorial_1_pic8.svg" /></p>
-</div>
-</div>
-<div class="section" id="dtm-using-the-cli">
+</section>
+</section>
+<section id="dtm-using-the-cli">
 <h2>2 - 2DTM using the CLI<a class="headerlink" href="#dtm-using-the-cli" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
 <p>TODO</p>
-</div>
-<div class="section" id="refine-2dtm-results-gui">
+</section>
+<section id="refine-2dtm-results-gui">
 <h2>3 - Refine 2DTM results GUI<a class="headerlink" href="#refine-2dtm-results-gui" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
 <p>TODO</p>
-</div>
-<div class="section" id="refine-2dtm-results-cli">
+</section>
+<section id="refine-2dtm-results-cli">
 <h2>4 - Refine 2DTM results CLI<a class="headerlink" href="#refine-2dtm-results-cli" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
 <p>TODO</p>
-</div>
-<div class="section" id="end-matter">
+</section>
+<section id="end-matter">
 <h2>End matter<a class="headerlink" href="#end-matter" title="Permalink to this heading">#</a></h2>
 <p>If you’ve made it through these tutorials, you are ready for some more advanced usage. Please have a look over the discussion into link TODO for an overview of how you might design an experiment where you use 2DTM.</p>
 <p>Once you are better oriented to the theory, please have a look at the How-to guides which give recipes for more specific scenerios, with relevant links to detailed discussion and reference material.</p>
 <p>Get matchin’!</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

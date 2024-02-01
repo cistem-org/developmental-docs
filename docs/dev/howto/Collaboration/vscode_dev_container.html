@@ -7,7 +7,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Development container in vs code &#8212; dev and user guides</title>
   
   
@@ -45,10 +46,13 @@
     <script src="../../../../_static/underscore.js"></script>
     <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
     <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -507,9 +511,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="development-container-in-vs-code">
+  <section class="tex2jax_ignore mathjax_ignore" id="development-container-in-vs-code">
 <h1>Development container in vs code<a class="headerlink" href="#development-container-in-vs-code" title="Permalink to this heading">#</a></h1>
-<div class="section" id="summary">
+<section id="summary">
 <h2><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>This document describes how to setup a development container for VSCode using Docker. cisTEM can be somewhat complicated to build, and this is a way to ensure that everyone is building in the same environment. This is also a way to ensure that the build environment is consistent across platforms.</p>
 <p>We will cover:</p>
@@ -522,21 +526,21 @@ document.write(`
 <ul class="simple">
 <li><p>altering or extending the development container</p></li>
 </ul>
-</div>
-<div class="section" id="prerequisites">
+</section>
+<section id="prerequisites">
 <h2><strong>Prerequisites</strong><a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><em>vscode</em></p>
+<li><p><em><strong>vscode</strong></em></p>
 <ul>
 <li><p><em>w/ dev containers extension</em></p></li>
 </ul>
 </li>
-<li><p><em>docker</em></p>
+<li><p><em><strong>docker</strong></em></p>
 <ul>
 <li><p>optional: <em>nvidia-docker</em></p></li>
 </ul>
 </li>
-<li><p><em>cisTEM source code</em></p></li>
+<li><p><em><strong>cisTEM source code</strong></em></p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -549,7 +553,7 @@ document.write(`
 </li>
 </ul>
 </div>
-<div class="section" id="install-vscode-official-docs">
+<section id="install-vscode-official-docs">
 <h3>Install vscode <a class="reference external" href="https://code.visualstudio.com/docs/setup/linux">(official docs)</a><a class="headerlink" href="#install-vscode-official-docs" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>software-properties-common<span class="w"> </span>apt-transport-https<span class="w"> </span>wget
 wget<span class="w"> </span>-q<span class="w"> </span>https://packages.microsoft.com/keys/microsoft.asc<span class="w"> </span>-O-<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
@@ -557,8 +561,8 @@ sudo<span class="w"> </span>add-apt-repository<span class="w"> </span><span clas
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>code
 </pre></div>
 </div>
-</div>
-<div class="section" id="install-docker-official-docs">
+</section>
+<section id="install-docker-official-docs">
 <h3>Install Docker <a class="reference external" href="https://docs.docker.com/engine/install/ubuntu/">(official docs)</a><a class="headerlink" href="#install-docker-official-docs" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># FIRST, cleanup any old install if you have one (or just use your existing install)</span>
 sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>docker-desktop
@@ -588,19 +592,25 @@ chmod<span class="w"> </span><span class="m">664</span><span class="w"> </span>/
 <p>If you want to run any gpu code <em><strong>inside</strong></em> the dev container, you will need to <a class="reference external" href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker">install nvidia-docker</a>.</p>
 <p>The binaries you compile with the default dev container will run <em><strong>outside</strong></em> the dev container without nvidia-docker assuming you have a compatible gpu driver installed.</p>
 </div>
-</div>
-<div class="section" id="install-the-cistem-source-code">
+</section>
+<section id="install-the-cistem-source-code">
 <h3>Install the cisTEM source code<a class="headerlink" href="#install-the-cistem-source-code" title="Permalink to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:timothygrant80/cisTEM.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># cisTEM is a fairly large project. The compiler can be dramatically slowed down when parsing the headers on slow file systems.</span>
+<span class="c1"># Choose the location for your cisTEM project with this in mind.</span>
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:timothygrant80/cisTEM.git
+<span class="nb">cd</span><span class="w"> </span>cisTEM
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="building-the-development-container">
+</section>
+</section>
+<section id="building-the-development-container">
 <h2><strong>Building the development container</strong><a class="headerlink" href="#building-the-development-container" title="Permalink to this heading">#</a></h2>
 <p>From the cisTEM source code directory, run the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ln<span class="w"> </span>-s<span class="w"> </span>.vscode_shared/CistemDev<span class="w"> </span>.vscode
-ln<span class="w"> </span>-s<span class="w"> </span>.vscode/devcontainer_wxStable_static.json<span class="w"> </span>.devcontainer.json
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># This establishes soft links to files need for vscode to build the devcontainer from existing images.</span>
+<span class="c1"># This part of the tutorial will not cover building the underlying containers.</span>
+./regenerate_containers.sh<span class="w"> </span>
+
+<span class="c1"># Now you are ready to compile. Open vscode.</span>
 code<span class="w"> </span>.
 </pre></div>
 </div>
@@ -610,32 +620,47 @@ code<span class="w"> </span>.
 </div>
 <p>Assuming you properly created the links when setting up the source code directory, you should be able to build the devcontainer in several ways.</p>
 <p>The easiest is to type <strong>ctrl+shift+p</strong> and type <strong>Reopen in Container</strong>. This will build the container and open the source code directory in the container.</p>
-<p>Depending on your internet connection, this may take a little while as the docker images (~12 Gb) are downloaded and built.</p>
-</div>
-<div class="section" id="using-the-development-container">
+<p>Depending on your internet connection, this may take a little while as the docker images (~7.5 Gb compressed) are downloaded and built.</p>
+</section>
+<section id="using-the-development-container">
 <h2><strong>Using the development container</strong><a class="headerlink" href="#using-the-development-container" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Setup autotools</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./regenerate_project.b
+<ul>
+<li><p>Setup autotools</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># cisTEM uses gnu auto tools as a build chain. You must run the following script on any new clone of the repo, addition of any new .m4 scripts, or any modification to configure.ac. Have a look at the source if you are curious.</span>
+./regenerate_project.b
+./regenerate_project.b
 </pre></div>
 </div>
-<ul class="simple">
+</li>
 <li><p>Configure the type of build you want for cisTEM.</p>
-<ul>
+<ul class="simple">
 <li><p><strong>ctrl+shift+p</strong> and type <strong>Tasks: Run Task</strong></p></li>
-<li><p>Select <strong>Configure cisTEM build</strong></p></li>
+<li><p>Select <strong>Configure cisTEM build</strong></p>
+<ul>
+<li><p>This will build with common and usefule options. To see other configure options available, run ./configure –help.</p></li>
+<li><p>Newer versions will prompt you to enter additional configure options (or enter if none).</p></li>
+<li><p>Older versions will require you to modifiy your task.json to add configure options.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>Build cisTEM</p>
-<ul>
+<ul class="simple">
 <li><p><strong>ctrl+shift+p</strong> and type <strong>Tasks: Run Task</strong></p></li>
-<li><p>Select <strong>Build cisTEM</strong></p></li>
+<li><p>Select <strong>Build cisTEM</strong></p>
+<ul>
+<li><p>Defaults to 8 threads.</p>
+<ul>
+<li><p>More is better.</p></li>
 </ul>
 </li>
 </ul>
-</div>
-</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
