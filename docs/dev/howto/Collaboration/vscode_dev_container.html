@@ -628,7 +628,6 @@ code<span class="w"> </span>.
 <li><p>Setup autotools</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># cisTEM uses gnu auto tools as a build chain. You must run the following script on any new clone of the repo, addition of any new .m4 scripts, or any modification to configure.ac. Have a look at the source if you are curious.</span>
 ./regenerate_project.b
-./regenerate_project.b
 </pre></div>
 </div>
 </li>
@@ -651,7 +650,7 @@ code<span class="w"> </span>.
 <ul>
 <li><p>Defaults to 8 threads.</p>
 <ul>
-<li><p>More is better.</p></li>
+<li><p>More is often better, but benefits will propably diminish if you exceed the number of physical cores on your cpu.</p></li>
 </ul>
 </li>
 </ul>
