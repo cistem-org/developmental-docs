@@ -1,3 +1,6 @@
-jupyter-book
-matplotlib
-numpy
+mkdocs>=1.5.0
+mkdocs-material>=9.0.0
+pymdown-extensions>=10.0
+mkdocs-git-revision-date-localized-plugin
+mkdocs-minify-plugin
+mike
